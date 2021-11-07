@@ -4,7 +4,7 @@
 import sys
 import psycopg2
 import re
-from helpers import getStudent
+from helpers import getStudent, getTranscriptInfo
 
 # define any local helper functions here
 
@@ -17,32 +17,82 @@ db = None
 
 argc = len(sys.argv)
 if argc < 2:
-  print(usage)
-  exit(1)
+	print(usage)
+	exit(1)
 zid = sys.argv[1]
 if zid[0] == 'z':
-  zid = zid[1:8]
+	zid = zid[1:8]
 digits = re.compile("^\d{7}$")
 if not digits.match(zid):
-  print(f"Invalid student ID {zid}")
-  exit(1)
+	print(f"Invalid student ID {zid}")
+	exit(1)
 
 # manipulate database
 
 try:
-  db = psycopg2.connect("dbname=mymyunsw")
-  stuInfo = getStudent(db,zid)
-  if not stuInfo:
-    print(f"Invalid student ID {zid}")
-    exit()
+	db = psycopg2.connect(dbname="mymyunsw",user="yst990102",password="zxcvb987321",port="6000")
+	stuInfo = getStudent(db,zid)
+	if not stuInfo:
+		print(f"Invalid student ID {zid}")
+		exit()
 
-  #print(stuInfo) # debug
-  # Print transcript for Student
-  # ... add your code here ...
+	# print student info
+	[zid_str, family_name, given_name] = stuInfo[0:3]
+	print(f"{zid_str} {family_name}, {given_name}")
+
+	# get the infos for transcripts
+	trans_infos = getTranscriptInfo(db, zid)
+
+	Grade_in_UOC  = ['A','B','C','D','HD','DN','CR','PS','XE','T','SY','EC','NC']
+	Grade_in_WAM  = ['HD','DN','CR','PS','AF','FL','UF']
+
+	Print_Xuoc = ['A','B','C','D','HD','DN','CR','PS','XE','T','SY','EC','NC']
+	Print_fail = ['AF','FL','UF']
+	Print_none = ['AS','AW','PW','RD','NF','LE','PE','WD','WJ']
+
+	weighted_mark_sum   = 0
+	total_attempted_uoc = 0
+	total_achieved_uoc  = 0
+
+	for trans_info in trans_infos:
+		[CourseCode, Term, SubjectTitle, Mark, Grade, UOC] = trans_info
+		# uoc and wam calculate
+		if Grade in Grade_in_UOC:
+			total_achieved_uoc  += UOC
+		if Grade in Grade_in_WAM:
+			weighted_mark_sum  += (Mark * UOC)
+			total_attempted_uoc += UOC
+
+		# print transcript
+		CourseCode_str = f"{CourseCode}"
+		Term_str = f"{Term}"
+		SubjectTitle_str = f"{SubjectTitle:<32s}"
+		Mark_str = "  -" if Mark == None else f"{Mark:>3}"
+		Grade_str = f"{Grade:2s}"
+		
+		UOC_str = ""
+		if Grade in Print_Xuoc:
+			UOC_str = f"{UOC:2d}uoc"
+		elif Grade in Print_fail:
+			UOC_str = "fail"
+		else:
+			UOC_str = ""
+
+		print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str + "  " + UOC_str)
+
+	print(f"UOC = {total_achieved_uoc}, WAM = {weighted_mark_sum}/{total_attempted_uoc} = {weighted_mark_sum / total_attempted_uoc:.1f}")
+
+
+
+
+
+	#print(stuInfo) # debug
+	# Print transcript for Student
+	# ... add your code here ...
 
 except Exception as err:
-  print("DB error: ", err)
+	print("DB error: ", err)
 finally:
-  if db:
-    db.close()
+	if db:
+		db.close()
 
