@@ -4,7 +4,7 @@
 import sys
 import psycopg2
 import re
-from helpers import PrintBasicProgramInfo, PrintCC, PrintDS, PrintGE, getBasicProgramInfo, getDetailProgramInfo, getProgram, getStream
+from helpers import PrintBasicProgramInfo, PrintBasicStreamInfo, PrintCC, PrintDS, PrintFE, PrintGE, PrintPE, getBasicProgramInfo, getBasicStreamInfo, getDetailProgramInfo, getDetailStreamInfo, getProgram, getStream
 
 # define any local helper functions here
 # ...
@@ -60,9 +60,26 @@ try:
 		if not strmInfo:
 			print(f"Invalid stream code {code}")
 			exit()
-		#print(strmInfo)  #debug
+		
+		#print(strmInfo)
+		basic_streamInfo = getBasicStreamInfo(db, code)
+		PrintBasicStreamInfo(basic_streamInfo)
+
+		print("Academic Requirements:")
+
 		# List the rules for Stream
-		# ... add your code here ...
+		detail_streamInfos = getDetailStreamInfo(db, code)
+		for detail_streamInfo in detail_streamInfos:
+			[name, type, min_req, max_req] = detail_streamInfo[:-1]
+			if type == 'CC':
+				subjects = detail_streamInfo[-1]
+				PrintCC(db, min_req, max_req, name, subjects)
+			elif type == 'PE':
+				subjects = detail_streamInfo[-1]
+				PrintPE(db, name, min_req, max_req, subjects)
+			elif type == 'FE':
+				subjects = detail_streamInfo[-1]
+				PrintFE(db, name, min_req, max_req, subjects)
 
 except Exception as err:
 	print(err)

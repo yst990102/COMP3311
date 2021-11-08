@@ -1,0 +1,63 @@
+               name                | type | min_req | max_req 
+-----------------------------------+------+---------+---------
+ COMPA1 Computing Electives        | PE   |      30 |        
+ COMPA1 Free Electives             | FE   |      36 |        
+ COMPAS Core                       | CC   |         |        
+ COMPAS Electives                  | PE   |      18 |      18
+ COMPAS Disciplinary Electives     | PE   |         |       6
+ Foundational Computing            | CC   |         |        
+ COMPBH Maths                      | CC   |         |        
+ COMPBH Physics and Electronics    | CC   |         |        
+ COMPBH Design                     | CC   |         |        
+ COMPBH Advanced Core              | CC   |         |        
+ COMPBH Computing Electives        | PE   |      36 |        
+ COMPBS Core                       | CC   |         |        
+ COMPBS Electives                  | PE   |      18 |      18
+ COMPBS Disciplinary Electives     | PE   |         |       6
+ COMPCS Disciplinary Electives     | PE   |      24 |      24
+ COMPD1 Core                       | CC   |         |        
+ COMPD1 Electives                  | PE   |      18 |      18
+ COMPD1 Computing Electives        | PE   |       6 |        
+ COMPD1 Free Electives             | FE   |      36 |        
+ COMPDS Electives                  | PE   |      18 |      18
+ COMPDS Disciplinary Electives     | PE   |         |      12
+ COMPE1 Core                       | CC   |         |        
+ COMPE1 Electives                  | PE   |      18 |      18
+ COMPD1 Computing Electives        | PE   |       6 |        
+ COMPD1 Free Electives             | FE   |      36 |        
+ COMPES Electives                  | PE   |      18 |      18
+ COMPES Disciplinary Electives     | PE   |         |      12
+ COMPI1 Core                       | CC   |         |        
+ COMPI1 Electives                  | PE   |      18 |      18
+ COMPI1 Computing Electives        | PE   |       6 |        
+ COMPI1 Free Electives             | FE   |      36 |        
+ COMPIS Electives                  | PE   |      18 |      18
+ COMPDS Disciplinary Electives     | PE   |         |      12
+ COMPJ1 Core                       | CC   |         |        
+ COMPJ1 Electives                  | PE   |      18 |      18
+ COMPJ1 Computing Electives        | PE   |       6 |        
+ COMPJ1 Free Electives             | FE   |      36 |        
+ COMPN1 Core                       | CC   |         |        
+ COMPN1 Electives                  | PE   |      18 |      18
+ COMPN1 Computing Electives        | PE   |       6 |        
+ COMPN1 Free Electives             | FE   |      36 |        
+ COMPS1 Core                       | CC   |         |        
+ COMPS1 Electives                  | PE   |      18 |      18
+ COMPS1 Computing Electives        | PE   |       6 |        
+ COMPS1 Free Electives             | FE   |      30 |        
+ COMPSS Algos/Stats Electives      | PE   |       6 |      12
+ COMPSS Databases Electives        | PE   |       6 |      12
+ COMPSS Machine Learning Electives | PE   |       6 |      12
+ COMPSS Disciplinary Electives     | PE   |         |       6
+ COMPY1 Core                       | CC   |         |        
+ COMPY1 Electives                  | PE   |      18 |      18
+ COMPY1 Computing Electives        | PE   |       6 |        
+ COMPY1 Free Electives             | FE   |      30 |        
+ Foundational Computing            | CC   |         |        
+ SENGAH Maths                      | CC   |         |        
+ SENGAH Workshops/Design           | CC   |         |        
+ SENGAH Advanced Core              | CC   |         |        
+ SENGAH Discipline Electives       | PE   |      36 |        
+ SENGAH Free Electives             | FE   |       6 |       6
+(59 rows)
+

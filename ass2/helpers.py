@@ -64,6 +64,7 @@ def getTranscriptInfo(db, zid):
 		return results
 
 # ================ Q2 ==================
+# ======== Program part
 def getBasicProgramInfo(db, programcode):
 	cursor = db.cursor()
 	query = """
@@ -142,7 +143,51 @@ def getSubjectNameByCode(db, subjectcode):
 	else:
 		return results
 
+# ======== Stream part
+def getBasicStreamInfo(db, streamcode):
+	cursor = db.cursor()
+	query = """
+	select
+		streams.code as code,
+		streams.name as name,
+		orgunits.longname as offeredby
+	from streams
+	join orgunits on (streams.offeredby = orgunits.id)
+	where streams.code = %s
+	"""
+	cursor.execute(query,[streamcode])
+	results = cursor.fetchone()
+	cursor.close()
+	if not results:
+		return None
+	else:
+		return results
+
+def getDetailStreamInfo(db, streamcode):
+	cursor = db.cursor()
+	query = """
+	select
+		rules.name as name,
+		rules.type as type,
+		rules.min_req as min_req,
+		rules.max_req as max_req,
+		aog.definition as course_requirements
+	from rules
+	join stream_rules on (stream_rules.rule = rules.id)
+	join streams on (streams.id = stream_rules.stream)
+	join academic_object_groups aog on (rules.ao_group = aog.id)
+	where streams.code = %s;
+	"""
+	cursor.execute(query,[streamcode])
+	results = cursor.fetchall()
+	cursor.close()
+	if not results:
+		return None
+	else:
+		return results
+
 # ================ print functions ==================
+# ======== Program part
 def PrintBasicProgramInfo(info):
 	[id, name, uoc, duration, offeredby] = info
 	print(f"{id} {name}, {uoc} UOC, {duration / 12:.1f} years")
@@ -192,3 +237,51 @@ def PrintCC(db, min_req, max_req, name, subjects):
 def PrintGE(UOC):
 	print(f"{UOC} UOC of General Education")
 	return
+
+# ======== Stream part
+def PrintBasicStreamInfo(info):
+	[streamcode, name, offeredby] = info
+	print(f"{streamcode} {name}")
+	print(f"- offered by {offeredby}")
+ 
+def PrintPE(db, name, min_req, max_req, subjects):
+	subject_list = subjects.split(",")
+	if min_req != None and max_req != None:
+		if min_req == max_req:
+			print(f"{min_req} UOC courses from {name}")
+		elif min_req < max_req:
+			print(f"between {min_req} and {max_req} UOC courses from {name}")
+	elif min_req == None:
+		print(f"up to {max_req} UOC courses from {name}")
+	elif max_req == None:
+		print(f"at least {min_req} UOC courses from {name}")
+	
+
+	if min_req != None and max_req != None:
+		for subject in subject_list:
+			if len(subject) == 8:
+				subject_info = getSubjectNameByCode(db, subject)
+				if subject_info == None:
+					subject_name = "???"
+				else:
+					subject_name = subject_info[1]
+				print(f"- {subject} {subject_name}")
+			else:
+				alter_list = re.split("{|;|}", subject)
+				alter_list = list(filter(None, alter_list))
+
+				for i in range(len(alter_list)):
+					subject_info = getSubjectNameByCode(db, alter_list[i])
+					if i == 1:
+						print(f"  or {alter_list[i]} {subject_info[1]}")
+					else:
+						print(f"- {alter_list[i]} {subject_info[1]}")
+	else:
+		print(f"- courses matching {subjects}")
+	return
+
+def PrintFE(db, name, min_req, max_req, subjects):
+    if min_req == None:
+        print(f"up to {min_req} UOC courses from {name}")
+    elif max_req == None:
+        print(f"at least {min_req} UOC of {name}")

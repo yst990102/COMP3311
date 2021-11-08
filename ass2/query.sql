@@ -27,16 +27,28 @@
 -- where programs.code = '3778';
 
 -- Q1
+-- select
+--     subjects.code as subject,
+--     terms.code as term,
+--     subjects.name as title,
+--     course_enrolments.mark,
+--     course_enrolments.grade,
+--     subjects.uoc
+-- from course_enrolments
+-- join courses on (course_enrolments.course = courses.id)
+-- join subjects on (courses.subject = subjects.id)
+-- join terms on (courses.term = terms.id)
+-- where course_enrolments.student = '5143550'
+-- order by terms.code, subjects.code;
+
 select
-    subjects.code as subject,
-    terms.code as term,
-    subjects.name as title,
-    course_enrolments.mark,
-    course_enrolments.grade,
-    subjects.uoc
-from course_enrolments
-join courses on (course_enrolments.course = courses.id)
-join subjects on (courses.subject = subjects.id)
-join terms on (courses.term = terms.id)
-where course_enrolments.student = '5143550'
-order by terms.code, subjects.code;
+    rules.name as name,
+    rules.type as type,
+    rules.min_req as min_req,
+    rules.max_req as max_req,
+    aog.definition as course_requirements
+from rules
+join stream_rules on (stream_rules.rule = rules.id)
+join streams on (streams.id = stream_rules.stream)
+join academic_object_groups aog on (rules.ao_group = aog.id)
+where streams.code = %s;
