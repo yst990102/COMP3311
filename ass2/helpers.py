@@ -2,6 +2,8 @@
 # add here any functions to share between Python scripts 
 # you must submit this even if you add nothing
 
+import re
+
 def getProgram(db,code):
 	cur = db.cursor()
 	cur.execute("select * from Programs where code = %s",[code])
@@ -60,3 +62,133 @@ def getTranscriptInfo(db, zid):
 		return None
 	else:
 		return results
+
+# ================ Q2 ==================
+def getBasicProgramInfo(db, programcode):
+	cursor = db.cursor()
+	query = """
+	select
+		programs.code as program,
+		programs.name as name,
+		programs.uoc as uoc,
+		programs.duration as duration,
+		orgunits.longname as offeredby
+	from programs
+	join orgunits on (programs.offeredby = orgunits.id)
+	where programs.code = %s;
+	"""
+	cursor.execute(query,[programcode])
+	results = cursor.fetchone()
+	cursor.close()
+	if not results:
+		return None
+	else:
+		return results
+
+def getDetailProgramInfo(db, programcode):
+	cursor = db.cursor()
+	query = """
+	select
+		rules.name as name,
+		rules.type as type,
+		rules.min_req as min_req,
+		rules.max_req as max_req,
+		academic_object_groups.definition as courses
+	from rules
+	join program_rules on (program_rules.rule = rules.id)
+	join programs on (programs.id = program_rules.program)
+	join academic_object_groups on (rules.ao_group = academic_object_groups.id)
+	where programs.id = %s;
+	"""
+	cursor.execute(query,[programcode])
+	results = cursor.fetchall()
+	cursor.close()
+	if not results:
+		return None
+	else:
+		return results
+
+def getStreamNameByCode(db, streamcode):
+	cursor = db.cursor()
+	query = """
+	select
+		streams.code,
+		streams.name
+	from streams
+	where streams.code = %s;
+	"""
+	cursor.execute(query,[streamcode])
+	results = cursor.fetchone()
+	cursor.close()
+	if not results:
+		return None
+	else:
+		return results
+
+def getSubjectNameByCode(db, subjectcode):
+	cursor = db.cursor()
+	query = """
+	select
+		subjects.code,
+		subjects.name
+	from subjects
+	where subjects.code = %s;
+	"""
+	cursor.execute(query,[subjectcode])
+	results = cursor.fetchone()
+	cursor.close()
+	if not results:
+		return None
+	else:
+		return results
+
+# ================ print functions ==================
+def PrintBasicProgramInfo(info):
+	[id, name, uoc, duration, offeredby] = info
+	print(f"{id} {name}, {uoc} UOC, {duration / 12:.1f} years")
+	print(f"- offered by {offeredby}")
+
+def PrintDS(db, min_req, max_req, name, streams):
+	print(f"{min_req} stream(s) from {name}")
+	stream_list = streams.split(",")
+	for stream_code in stream_list:
+		stream_info = getStreamNameByCode(db, stream_code)
+		if stream_info == None:
+			stream_name = "???"
+		else:
+			stream_name = stream_info[1]
+		print(f"- {stream_code} {stream_name}")
+	return
+
+def PrintCC(db, min_req, max_req, name, subjects):
+	if min_req == max_req == 1:
+		print(f"{name}")
+	elif min_req == max_req:
+		print(f"all courses from {name}")
+	else:
+		print(f"between {min_req} and {max_req} UOC courses from {name}")
+
+	subject_list = subjects.split(",")
+	for subject in subject_list:
+		if len(subject) == 8:
+			subject_info = getSubjectNameByCode(db, subject)
+			if subject_info == None:
+				subject_name = "???"
+			else:
+				subject_name = subject_info[1]
+			print(f"- {subject} {subject_name}")
+		else:
+			print("=== subject = ", subject)
+
+			alter_list = re.split("{|;|}", subject)
+			alter_list = list(filter(None, alter_list))
+			print("alter list == ", alter_list)
+
+			for i in range(len(alter_list)):
+				subject_info = getSubjectNameByCode(db, alter_list[i])
+				if i == 1:
+					print(f"  or (alter_list[i]) {subject_info[1]}")
+				else:
+					print(f"  -{alter_list[i]} {subject_info[1]}")
+
+	return

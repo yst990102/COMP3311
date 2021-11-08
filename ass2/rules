@@ -4,7 +4,7 @@
 import sys
 import psycopg2
 import re
-from helpers import getProgram, getStream
+from helpers import PrintBasicProgramInfo, PrintCC, PrintDS, getBasicProgramInfo, getDetailProgramInfo, getProgram, getStream
 
 # define any local helper functions here
 # ...
@@ -18,37 +18,54 @@ db = None
 
 argc = len(sys.argv)
 if argc < 2:
-  print(usage)
-  exit(1)
+	print(usage)
+	exit(1)
 code = sys.argv[1]
 if len(code) == 4:
-  codeOf = "program"
+	codeOf = "program"
 elif len(code) == 6:
-  codeOf = "stream"
+	codeOf = "stream"
 
 try:
-  db = psycopg2.connect("dbname=mymyunsw")
-  if codeOf == "program":
-    progInfo = getProgram(db,code)
-    if not progInfo:
-      print(f"Invalid program code {code}")
-      exit()
-    #print(progInfo)  #debug
-    # List the rules for Program
+	db = psycopg2.connect(dbname="mymyunsw",user="yst990102",password="zxcvb987321",port="6000")
+	if codeOf == "program":
+		progInfo = getProgram(db,code)
+		if not progInfo:
+			print(f"Invalid program code {code}")
+			exit()
+		
+		#print(progInfo)
+		basic_progInfo = getBasicProgramInfo(db, code)
+		PrintBasicProgramInfo(basic_progInfo)
 
-    # ... add your code here ...
+		print("Academic Requirements:")
 
-  elif codeOf == "stream":
-    strmInfo = getStream(db,code)
-    if not strmInfo:
-      print(f"Invalid stream code {code}")
-      exit()
-    #print(strmInfo)  #debug
-    # List the rules for Stream
-    # ... add your code here ...
+		# List the rules for Program
+		detail_progInfos = getDetailProgramInfo(db, code)
+		for detail_progInfo in detail_progInfos:
+			[name, type, min_req, max_req] = detail_progInfo[:-1]
+
+			if type == 'DS':
+				streams = detail_progInfo[-1]
+				PrintDS(db, min_req, max_req, name, streams)
+			elif type == 'CC':
+				subjects = detail_progInfo[-1]
+				PrintCC(db, min_req, max_req, name, subjects)
+
+
+		# ... add your code here ...
+
+	elif codeOf == "stream":
+		strmInfo = getStream(db,code)
+		if not strmInfo:
+			print(f"Invalid stream code {code}")
+			exit()
+		#print(strmInfo)  #debug
+		# List the rules for Stream
+		# ... add your code here ...
 
 except Exception as err:
-  print(err)
+	print(err)
 finally:
-  if db:
-    db.close()
+	if db:
+		db.close()

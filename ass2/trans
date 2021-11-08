@@ -56,6 +56,7 @@ try:
 
 	for trans_info in trans_infos:
 		[CourseCode, Term, SubjectTitle, Mark, Grade, UOC] = trans_info
+		print(trans_info)
 		# uoc and wam calculate
 		if Grade in Grade_in_UOC:
 			total_achieved_uoc  += UOC
@@ -80,7 +81,7 @@ try:
 
 		print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str + "  " + UOC_str)
 
-	print(f"UOC = {total_achieved_uoc}, WAM = {weighted_mark_sum}/{total_attempted_uoc} = {weighted_mark_sum / total_attempted_uoc:.1f}")
+	print(f"UOC = {total_achieved_uoc}, WAM = {weighted_mark_sum / total_attempted_uoc:.1f}")
 
 
 
