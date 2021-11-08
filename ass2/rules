@@ -4,7 +4,7 @@
 import sys
 import psycopg2
 import re
-from helpers import PrintBasicProgramInfo, PrintCC, PrintDS, getBasicProgramInfo, getDetailProgramInfo, getProgram, getStream
+from helpers import PrintBasicProgramInfo, PrintCC, PrintDS, PrintGE, getBasicProgramInfo, getDetailProgramInfo, getProgram, getStream
 
 # define any local helper functions here
 # ...
@@ -51,9 +51,9 @@ try:
 			elif type == 'CC':
 				subjects = detail_progInfo[-1]
 				PrintCC(db, min_req, max_req, name, subjects)
-
-
-		# ... add your code here ...
+			elif type == 'GE':
+				UOC = min_req
+				PrintGE(UOC)
 
 	elif codeOf == "stream":
 		strmInfo = getStream(db,code)

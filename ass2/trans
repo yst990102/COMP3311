@@ -56,12 +56,14 @@ try:
 
 	for trans_info in trans_infos:
 		[CourseCode, Term, SubjectTitle, Mark, Grade, UOC] = trans_info
-		print(trans_info)
 		# uoc and wam calculate
 		if Grade in Grade_in_UOC:
-			total_achieved_uoc  += UOC
+			total_achieved_uoc += UOC
 		if Grade in Grade_in_WAM:
-			weighted_mark_sum  += (Mark * UOC)
+			if Mark != None:
+ 				weighted_mark_sum += (Mark * UOC)
+			else:
+				weighted_mark_sum += 0
 			total_attempted_uoc += UOC
 
 		# print transcript
@@ -74,12 +76,12 @@ try:
 		UOC_str = ""
 		if Grade in Print_Xuoc:
 			UOC_str = f"{UOC:2d}uoc"
+			print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str + "  " + UOC_str)
 		elif Grade in Print_fail:
-			UOC_str = "fail"
+			print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str + "   " + "fail")
 		else:
 			UOC_str = ""
-
-		print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str + "  " + UOC_str)
+			print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str)
 
 	print(f"UOC = {total_achieved_uoc}, WAM = {weighted_mark_sum / total_attempted_uoc:.1f}")
 

@@ -161,14 +161,14 @@ def PrintDS(db, min_req, max_req, name, streams):
 	return
 
 def PrintCC(db, min_req, max_req, name, subjects):
-	if min_req == max_req == 1:
+	subject_list = subjects.split(",")
+	if len(subject_list) == 1:
 		print(f"{name}")
 	elif min_req == max_req:
 		print(f"all courses from {name}")
 	else:
 		print(f"between {min_req} and {max_req} UOC courses from {name}")
 
-	subject_list = subjects.split(",")
 	for subject in subject_list:
 		if len(subject) == 8:
 			subject_info = getSubjectNameByCode(db, subject)
@@ -178,17 +178,17 @@ def PrintCC(db, min_req, max_req, name, subjects):
 				subject_name = subject_info[1]
 			print(f"- {subject} {subject_name}")
 		else:
-			print("=== subject = ", subject)
-
 			alter_list = re.split("{|;|}", subject)
 			alter_list = list(filter(None, alter_list))
-			print("alter list == ", alter_list)
 
 			for i in range(len(alter_list)):
 				subject_info = getSubjectNameByCode(db, alter_list[i])
 				if i == 1:
-					print(f"  or (alter_list[i]) {subject_info[1]}")
+					print(f"  or {alter_list[i]} {subject_info[1]}")
 				else:
-					print(f"  -{alter_list[i]} {subject_info[1]}")
+					print(f"- {alter_list[i]} {subject_info[1]}")
+	return
 
+def PrintGE(UOC):
+	print(f"{UOC} UOC of General Education")
 	return

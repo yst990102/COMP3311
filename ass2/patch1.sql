@@ -9,7 +9,7 @@ alter table course_enrolments
 
 -- fix owner of 3707
 
-update programs set offeredby = 112 where id = 3070;
+update programs set offeredby = 112 where id = 3707;
 
 -- fix marks for Thesis A (COMP4930)
 

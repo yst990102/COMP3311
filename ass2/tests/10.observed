@@ -18,18 +18,13 @@ all courses from Foundational Computing
 - COMP2521 Data Structures and Algorithms
 all courses from Comp Sci Maths
 - MATH1081 Discrete Mathematics
-=== subject =  {MATH1131;MATH1141}
-alter list ==  ['MATH1131', 'MATH1141']
-  -MATH1131 Mathematics 1A
-  or (alter_list[i]) Higher Mathematics 1A
-=== subject =  {MATH1231;MATH1241}
-alter list ==  ['MATH1231', 'MATH1241']
-  -MATH1231 Mathematics 1B
-  or (alter_list[i]) Higher Mathematics 1B
+- MATH1131 Mathematics 1A
+  or MATH1141 Higher Mathematics 1A
+- MATH1231 Mathematics 1B
+  or MATH1241 Higher Mathematics 1B
 all courses from Comp Sci Advanced Core
-=== subject =  {COMP3121;COMP3821}
-alter list ==  ['COMP3121', 'COMP3821']
-  -COMP3121 Algorithms & Programming Tech
-  or (alter_list[i]) Ext Algorithms&Prog Techniques
+- COMP3121 Algorithms & Programming Tech
+  or COMP3821 Ext Algorithms&Prog Techniques
 - COMP3900 Computer Science Project
 - COMP4920 Management and Ethics
+12 UOC of General Education
