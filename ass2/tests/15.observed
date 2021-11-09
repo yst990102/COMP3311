@@ -1,0 +1,35 @@
+5197273 Wilson-Rogers, Darien
+  3707 Bachelor of Engineering (Hons)
+  COMPBH Computer Engineering
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'COMPBH': [['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['COMPBH Maths', 'CC', None, None, [['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241'], 'MATH2069', 'MATH2099']], ['COMPBH Physics and Electronics', 'CC', None, None, [['PHYS1121', 'PHYS1131'], ['PHYS1221', 'PHYS1231'], 'ELEC1111', 'ELEC2133', 'ELEC2134']], ['COMPBH Design', 'CC', None, None, [['ENGG1000', 'DESN1000'], 'DESN2000']], ['COMPBH Advanced Core', 'CC', None, None, ['COMP3211', 'COMP3222', 'COMP3231', 'COMP3601', 'COMP4601', 'COMP4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['COMPBH Computing Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...']]]}
+
+Completed:
+I find it! here :  Foundational Computing
+COMP1511 19T1 Programming Fundamentals         84 DN   6uoc towards Foundational Computing
+I find it! here :  COMPBH Design
+ENGG1000 19T1 Engineering Design               69 CR   6uoc towards COMPBH Design
+I find it! here :  COMPBH Maths
+MATH1131 19T1 Mathematics 1A                   84 DN   6uoc towards COMPBH Maths
+I find it! here :  Foundational Computing
+COMP1521 19T2 Computer Systems Fundamentals    88 HD   6uoc towards Foundational Computing
+I find it! here :  COMPBH Maths
+MATH1231 19T2 Mathematics 1B                   54 PS   6uoc towards COMPBH Maths
+I find it! here :  COMPBH Physics and Electronics
+PHYS1121 19T2 Physics 1A                       85 HD   6uoc towards COMPBH Physics and Electronics
+I find it! here :  Foundational Computing
+COMP1531 19T3 Software Eng Fundamentals        52 PS   6uoc towards Foundational Computing
+I find it! here :  COMPBH Physics and Electronics
+ELEC1111 19T3 Elec & Telecomm Eng              64 PS   6uoc towards COMPBH Physics and Electronics
+I find it! here :  Foundational Computing
+COMP2521 20T1 Data Structures and Algorithms    - SY   6uoc towards Foundational Computing
+I find it! here :  COMPBH Computing Electives
+COMP3121 20T2 Algorithms & Programming Tech   100 HD   6uoc towards COMPBH Computing Electives
+I find it! here :  COMPBH Advanced Core
+I find it! here :  COMPBH Computing Electives
+COMP3231 20T2 Operating Systems                71 CR   6uoc towards COMPBH Computing Electives
+I find it! here :  Foundational Computing
+COMP2511 20T3 O-O Design & Programming         94 HD   6uoc towards Foundational Computing
+I find it! here :  COMPBH Advanced Core
+I find it! here :  COMPBH Computing Electives
+COMP3222 20T3 Digital Circuits and Systems     83 DN   6uoc towards COMPBH Computing Electives
+UOC = 78 so far

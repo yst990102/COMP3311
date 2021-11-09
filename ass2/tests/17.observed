@@ -1,0 +1,41 @@
+5198386 Dib, Karim
+  3707 Bachelor of Engineering (Hons)
+  SENGAH Software Engineering
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['SENGAH Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241'], 'MATH2400', 'MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['ENGG1000', 'DESN2000', 'SENG2011', 'SENG2021', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP2041', 'COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+Completed:
+I find it! here :  Foundational Computing
+COMP1511 19T1 Programming Fundamentals         62 PS   6uoc towards Foundational Computing
+I find it! here :  SENGAH Workshops/Design
+ENGG1000 19T1 Engineering Design               51 PS   6uoc towards SENGAH Workshops/Design
+I find it! here :  SENGAH Maths
+MATH1131 19T1 Mathematics 1A                   54 PS   6uoc towards SENGAH Maths
+CHEM1011 19T2 Chemistry 1A                     87 HD   6uoc does not satisfy any rule
+I find it! here :  Foundational Computing
+COMP1521 19T2 Computer Systems Fundamentals    47 FL   fail does not count
+I find it! here :  SENGAH Maths
+MATH1081 19T2 Discrete Mathematics             71 CR   6uoc towards SENGAH Maths
+I find it! here :  Foundational Computing
+COMP1521 19T3 Computer Systems Fundamentals    58 PS   6uoc towards Foundational Computing
+I find it! here :  Foundational Computing
+COMP1531 19T3 Software Eng Fundamentals        67 CR   6uoc towards Foundational Computing
+I find it! here :  SENGAH Maths
+MATH1231 19T3 Mathematics 1B                   56 PS   6uoc towards SENGAH Maths
+I find it! here :  Foundational Computing
+COMP2521 20T1 Data Structures and Algorithms    - SY   6uoc towards Foundational Computing
+I find it! here :  SENGAH Workshops/Design
+SENG2021 20T1 Reqts & Design Workshop          65 CR   6uoc towards SENGAH Workshops/Design
+I find it! here :  SENGAH Advanced Core
+COMP2041 20T2 Software Construction            46 FL   fail does not count
+I find it! here :  SENGAH Workshops/Design
+DESN2000 20T2 Engineering Design 2             80 DN   6uoc towards SENGAH Workshops/Design
+I find it! here :  SENGAH Maths
+MATH2400 20T2 Finite Mathematics               35 FL   fail does not count
+I find it! here :  SENGAH Maths
+MATH2859 20T2 Prob, Stats and Information      31 FL   fail does not count
+I find it! here :  Foundational Computing
+COMP2511 20T3 O-O Design & Programming         32 FL   fail does not count
+I find it! here :  SENGAH Advanced Core
+I find it! here :  SENGAH Discipline Electives
+COMP3311 20T3 Database Systems                 75 DN   6uoc towards SENGAH Discipline Electives
+UOC = 72 so far

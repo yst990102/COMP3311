@@ -4,7 +4,7 @@
 import sys
 import psycopg2
 import re
-from helpers import getStudent, getProgram, getStream
+from helpers import getBasicProgramInfo, getBasicStreamInfo, getCompletedSubjects, getProgramRules, getProgramStreamTableByZid, getStreamRules, getStudent, getProgram, getStream, getNameByZid
 
 # define any local helper functions here
 
@@ -39,30 +39,172 @@ if argc == 4:
 try:
 	db = psycopg2.connect(dbname="mymyunsw",user="yst990102",password="zxcvb987321",port="6000")
 	stuInfo = getStudent(db,zid)
-	#print(stuInfo) # debug
 	if not stuInfo:
 		print(f"Invalid student id {zid}")
 		exit()
+	#print(stuInfo)
+	[family_name , given_name] = getNameByZid(db, zid)[1:]
+	print(f"{zid} {family_name}, {given_name}")
 
 	if progCode:
 		progInfo = getProgram(db,progCode)
 		if not progInfo:
 			print(f"Invalid program code {progCode}")
 			exit()
-		#print(progInfo)  #debug
 
 	if strmCode:
 		strmInfo = getStream(db,strmCode)
 		if not strmInfo:
 			print(f"Invalid program code {strmCode}")
 			exit()
-		#print(strmInfo)  #debug
 
 	# if have a program/stream
 	#   show progression check on supplied program/stream
 	# else
 	#   show progression check on most recent program/stream enrolment
-	# ... add your code here ...
+
+	if progCode and strmCode:
+		program = progCode
+		stream = strmCode
+	else:
+		prog_strm_table = getProgramStreamTableByZid(db, zid)
+		latest_prog_strm = prog_strm_table[-1]
+		program = latest_prog_strm[1]
+		stream = latest_prog_strm[2]
+
+	program_name = getBasicProgramInfo(db,program)[1]
+	stream_name = getBasicStreamInfo(db, stream)[1]
+
+	print(f"  {program} {program_name}")
+	print(f"  {stream} {stream_name}")
+
+	rules = {}
+	# get program rules
+	program_rules = getProgramRules(db, program)
+	formated_program_rules = []
+	for program_rule in program_rules:
+		formated_program_rule = list(program_rule)[:-1]
+
+		splited_requirements = program_rule[-1].split(",")
+		formated_requirements = []
+		for i in splited_requirements:
+			if '#' in i:
+				formated_requirements.append(re.sub('#', '.', i))
+			else:
+				formated_requirements.append(i)
+  
+		formated_program_rule.append(formated_requirements)
+		formated_program_rules.append(formated_program_rule)
+  
+  
+	rules[program] = formated_program_rules
+
+	# get stream rules
+	stream_rules = getStreamRules(db, stream)
+	formated_stream_rules = []
+	for stream_rule in stream_rules:
+		formated_stream_rule = list(stream_rule)[:-1]
+
+		splited_requirements = stream_rule[-1].split(",")
+		formated_requirements = []
+		for i in splited_requirements:
+			i = i.replace('{', '["')
+			i = i.replace('}', '"]')
+			i = i.replace(';', '","')
+			if '[' in i and ']' in i:
+				formated_requirements.append(eval(i))
+			elif '#' in i:
+				formated_requirements.append(re.sub('#', '.', i))
+			else:
+				formated_requirements.append(i)
+		formated_stream_rule.append(formated_requirements)
+		formated_stream_rules.append(formated_stream_rule)
+	rules[stream] = formated_stream_rules
+
+	# debug
+	print(rules)
+
+
+	print(f"\nCompleted:")
+	CompletedSubjects = getCompletedSubjects(db, zid)
+
+	Grade_in_UOC  = ['A','B','C','D','HD','DN','CR','PS','XE','T','SY','EC','NC']
+	Grade_in_WAM  = ['HD','DN','CR','PS','AF','FL','UF']
+ 
+	Print_Xuoc = ['A','B','C','D','HD','DN','CR','PS','XE','T','SY','EC','NC']
+	Print_fail = ['AF','FL','UF']
+	Print_none = ['AS','AW','PW','RD','NF','LE','PE','WD','WJ']
+
+	total_achieved_uoc  = 0
+	for subjectInfo in CompletedSubjects:
+		[CourseCode, Term, SubjectTitle, Mark, Grade, UOC] = subjectInfo
+  
+		# uoc and wam calculate
+		if Grade in Grade_in_UOC:
+			total_achieved_uoc += UOC
+
+		CourseCode_str = f"{CourseCode}"
+		Term_str = f"{Term}"
+		SubjectTitle_str = f"{SubjectTitle:<32s}"
+		Mark_str = "  -" if Mark == None else f"{Mark:>3}"
+		Grade_str = f"{Grade:2s}"
+		
+		Rule_str = ""
+		# check program rules
+		for program_rule in rules[program]:
+			for requirement in program_rule[-1]:
+				is_found = False
+				if type(requirement) == list:
+					for code_str in requirement:
+						if re.match(code_str, CourseCode):
+							Rule_str = program_rule[0]
+							print("I find it! here : ", Rule_str) # debug
+							is_found = True
+				elif type(requirement) == str and re.match(requirement, CourseCode):
+					Rule_str = program_rule[0]
+					print("I find it! here : ", Rule_str) # debug
+					is_found = True
+
+				if is_found == True:
+					break
+
+		# check stream rules
+		if Rule_str == "":
+			for stream_rule in rules[stream]:
+				for requirement in stream_rule[-1]:
+					is_found = False
+					if type(requirement) == list:
+						for code_str in requirement:
+							if re.match(code_str, CourseCode):
+								Rule_str = stream_rule[0]
+								print("I find it! here : ", Rule_str) # debug
+								is_found = True
+					elif type(requirement) == str and re.match(requirement, CourseCode):
+						Rule_str = stream_rule[0]
+						print("I find it! here : ", Rule_str) # debug
+						is_found = True
+
+					if is_found == True:
+						break
+
+  
+		UOC_str = ""
+		if Grade in Print_Xuoc:
+			UOC_str = f"{UOC:2d}uoc"
+
+		Toward_str = ""
+		if Rule_str == "":
+			Toward_str = " does not satisfy any rule"
+		else:
+			Toward_str = f" towards {Rule_str}"
+  
+		if Grade in Print_Xuoc:
+			print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str + "  " + UOC_str + Toward_str)
+		elif Grade in Print_fail:
+			print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str + "   " + "fail does not count")
+		else:
+			print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str + Toward_str)
+	print(f"UOC = {total_achieved_uoc} so far")
 
 except Exception as err:
 	print("DB error: ", err)

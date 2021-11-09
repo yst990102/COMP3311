@@ -1,0 +1,36 @@
+5123788 Greenfield, Drew
+  8543 Master of Information Technology
+  COMPSS Data Science and Engineering
+{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, ['{COMP9900;COMP9991}']], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92...']]]}
+
+Completed:
+I find it! here :  PG Core Courses
+COMP9021 17s1 Principles of Programming       100 HD   6uoc towards PG Core Courses
+I find it! here :  PG Core Courses
+COMP9311 17s1 Database Systems                 63 PS   6uoc towards PG Core Courses
+I find it! here :  PG Core Courses
+COMP9024 17s2 Data Structures & Algorithms     86 HD   6uoc towards PG Core Courses
+I find it! here :  PG Core Courses
+COMP9331 17s2 Computer Networks&Applications   79 DN   6uoc towards PG Core Courses
+I find it! here :  Project Management
+GSOE9820 17s2 Project Management               94 HD   6uoc towards Project Management
+I find it! here :  COMPSS Disciplinary Electives
+COMP9020 18s1 Foundations of Comp. Science     85 HD   6uoc towards COMPSS Disciplinary Electives
+I find it! here :  COMPSS Disciplinary Electives
+COMP9414 18s1 Artificial Intelligence          91 HD   6uoc towards COMPSS Disciplinary Electives
+I find it! here :  ADK Courses
+COMP9315 18s2 Database Systems Implementat'n   76 DN   6uoc towards ADK Courses
+I find it! here :  ADK Courses
+COMP9444 18s2 Neural Networks, Deep Learning   63 PS   6uoc towards ADK Courses
+I find it! here :  ADK Courses
+COMP9417 19T2 Machine Learning & Data Mining   96 HD   6uoc towards ADK Courses
+I find it! here :  COMPSS Databases Electives
+I find it! here :  COMPSS Disciplinary Electives
+COMP9313 19T3 Big Data Management              76 DN   6uoc towards COMPSS Disciplinary Electives
+MATH5846 20T1 Intro to Prob and Stoch Proc      - SY   6uoc does not satisfy any rule
+MATH5856 20T1 Intro to Stats and Stat Comput    - SY   6uoc does not satisfy any rule
+I find it! here :  COMPSS Disciplinary Electives
+COMP9900 20T2 Info Tech Project               100 HD   6uoc towards COMPSS Disciplinary Electives
+I find it! here :  COMPSS Algos/Stats Electives
+MATH5855 20T3 Multivariate Analysis           100 HD   6uoc towards COMPSS Algos/Stats Electives
+UOC = 90 so far
