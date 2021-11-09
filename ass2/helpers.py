@@ -193,6 +193,12 @@ def PrintBasicProgramInfo(info):
 	print(f"{id} {name}, {uoc} UOC, {duration / 12:.1f} years")
 	print(f"- offered by {offeredby}")
 
+# ======== Stream part
+def PrintBasicStreamInfo(info):
+	[streamcode, name, offeredby] = info
+	print(f"{streamcode} {name}")
+	print(f"- offered by {offeredby}")
+
 def PrintDS(db, name, min_req, max_req, streams):
 	print(f"{min_req} stream(s) from {name}")
 	stream_list = streams.split(",")
@@ -238,12 +244,6 @@ def PrintGE(UOC):
 	print(f"{UOC} UOC of General Education")
 	return
 
-# ======== Stream part
-def PrintBasicStreamInfo(info):
-	[streamcode, name, offeredby] = info
-	print(f"{streamcode} {name}")
-	print(f"- offered by {offeredby}")
- 
 def PrintPE(db, name, min_req, max_req, subjects):
 	subject_list = subjects.split(",")
 	if min_req != None and max_req != None:
@@ -284,4 +284,7 @@ def PrintFE(db, name, min_req, max_req, subjects):
     if min_req == None:
         print(f"up to {min_req} UOC courses from {name}")
     elif max_req == None:
-        print(f"at least {min_req} UOC of {name}")
+        if "Free Electives" not in name:
+        	print(f"at least {min_req} UOC of {name}")
+        else:
+            print(f"at least {min_req} UOC of Free Electives")
