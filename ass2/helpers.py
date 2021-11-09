@@ -193,7 +193,7 @@ def PrintBasicProgramInfo(info):
 	print(f"{id} {name}, {uoc} UOC, {duration / 12:.1f} years")
 	print(f"- offered by {offeredby}")
 
-def PrintDS(db, min_req, max_req, name, streams):
+def PrintDS(db, name, min_req, max_req, streams):
 	print(f"{min_req} stream(s) from {name}")
 	stream_list = streams.split(",")
 	for stream_code in stream_list:
@@ -205,7 +205,7 @@ def PrintDS(db, min_req, max_req, name, streams):
 		print(f"- {stream_code} {stream_name}")
 	return
 
-def PrintCC(db, min_req, max_req, name, subjects):
+def PrintCC(db, name, min_req, max_req, subjects):
 	subject_list = subjects.split(",")
 	if len(subject_list) == 1:
 		print(f"{name}")

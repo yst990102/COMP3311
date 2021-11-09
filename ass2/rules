@@ -43,14 +43,19 @@ try:
 		# List the rules for Program
 		detail_progInfos = getDetailProgramInfo(db, code)
 		for detail_progInfo in detail_progInfos:
-			[name, type, min_req, max_req] = detail_progInfo[:-1]
-
+			[name, type, min_req, max_req, def_info] = detail_progInfo
 			if type == 'DS':
-				streams = detail_progInfo[-1]
-				PrintDS(db, min_req, max_req, name, streams)
+				# streams = detail_progInfo[-1]
+				PrintDS(db, name, min_req, max_req, def_info)
 			elif type == 'CC':
-				subjects = detail_progInfo[-1]
-				PrintCC(db, min_req, max_req, name, subjects)
+				# subjects = detail_progInfo[-1]
+				PrintCC(db, name, min_req, max_req, def_info)
+			elif type == 'PE':
+				# subjects = detail_progInfo[-1]
+				PrintPE(db, name, min_req, max_req, def_info)
+			elif type == 'FE':
+				# subjects = detail_progInfo[-1]
+				PrintFE(db, name, min_req, max_req, def_info)
 			elif type == 'GE':
 				UOC = min_req
 				PrintGE(UOC)
@@ -70,16 +75,22 @@ try:
 		# List the rules for Stream
 		detail_streamInfos = getDetailStreamInfo(db, code)
 		for detail_streamInfo in detail_streamInfos:
-			[name, type, min_req, max_req] = detail_streamInfo[:-1]
-			if type == 'CC':
-				subjects = detail_streamInfo[-1]
-				PrintCC(db, min_req, max_req, name, subjects)
+			[name, type, min_req, max_req, def_info] = detail_streamInfo
+			if type == 'DS':
+				# streams = detail_streamInfo[-1]
+				PrintDS(db, name, min_req, max_req, def_info)
+			elif type == 'CC':
+				# subjects = detail_streamInfo[-1]
+				PrintCC(db, name, min_req, max_req, def_info)
 			elif type == 'PE':
-				subjects = detail_streamInfo[-1]
-				PrintPE(db, name, min_req, max_req, subjects)
+				# subjects = detail_streamInfo[-1]
+				PrintPE(db, name, min_req, max_req, def_info)
 			elif type == 'FE':
-				subjects = detail_streamInfo[-1]
-				PrintFE(db, name, min_req, max_req, subjects)
+				# subjects = detail_streamInfo[-1]
+				PrintFE(db, name, min_req, max_req, def_info)
+			elif type == 'GE':
+				UOC = min_req
+				PrintGE(UOC)
 
 except Exception as err:
 	print(err)
