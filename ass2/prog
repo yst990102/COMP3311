@@ -4,13 +4,30 @@
 import sys
 import psycopg2
 import re
-from helpers import Grade_in_UOC, Print_Xuoc, Print_fail, getBasicProgramInfo, getBasicStreamInfo, getCompletedSubjects, getProgramRules, getProgramStreamTableByZid, getStreamRules, getStudent, getProgram, getStream, getNameByZid
+from helpers import Print_fail, getBasicProgramInfo, getBasicStreamInfo, getCompletedSubjects, getProgramRules, getProgramStreamTableByZid, getStreamRules, getStudent, getProgram, getStream, getNameByZid
 
 # define any local helper functions here
-debug = 1
+def getRelevantRules(rules, CourseCode, required_type):
+	relevant_rules = []
+	for rule in rules:
+		[rule_name, rule_type, min_req, max_req, courses] = rule
+		if rule_type == required_type:
+			for course in courses:
+				if type(course) == list:
+					for course_code in course:
+						if re.match(course_code, CourseCode):
+							relevant_rules.append(rule_name)
+				elif type(course) == str and re.match(course, CourseCode):
+					relevant_rules.append(rule_name)
+		else:
+			continue
+	return relevant_rules
 
 
 ### set up some globals
+debug = 1
+
+
 
 usage = f"Usage: {sys.argv[0]} zID [Program Stream]"
 db = None
@@ -77,10 +94,9 @@ try:
 	program_name = getBasicProgramInfo(db,program)[1]
 	stream_name = getBasicStreamInfo(db, stream)[1]
 
-	print(f"  {program} {program_name}")
-	print(f"  {stream} {stream_name}")
+	if debug : print(f"  {program} {program_name}")
+	if debug : print(f"  {stream} {stream_name}")
 
-	rules = {}
 	# get program rules
 	program_rules = getProgramRules(db, program)
 	formated_program_rules = []
@@ -102,7 +118,7 @@ try:
   
 		formated_program_rule.append(formated_requirements)
 		formated_program_rules.append(formated_program_rule)
-	rules[program] = formated_program_rules
+	program_rules = formated_program_rules
 
 	# get stream rules
 	stream_rules = getStreamRules(db, stream)
@@ -124,143 +140,62 @@ try:
 				formated_requirements.append(i)
 		formated_stream_rule.append(formated_requirements)
 		formated_stream_rules.append(formated_stream_rule)
-	rules[stream] = formated_stream_rules
+	stream_rules = formated_stream_rules
 
-	if debug : print(rules)
-
+	if debug : print(program_rules)
+	if debug : print(stream_rules)
 
 	print(f"\nCompleted:")
 	CompletedSubjects = getCompletedSubjects(db, zid)
+	for CompletedSubject in CompletedSubjects:
+		[CourseCode, Term, SubjectTitle, Mark, Grade, UOC] = CompletedSubject
+		if Grade in Print_fail:
+			print(f"{CourseCode} {Term} {SubjectTitle:<32s}{Mark:>3}   fail does not count")
+		else:
+			relevant_rules = {}
+			relevant_program_rules_DS = getRelevantRules(program_rules, CourseCode, 'DS')
+			relevant_program_rules_CC = getRelevantRules(program_rules, CourseCode, 'CC')
+			relevant_program_rules_PE = getRelevantRules(program_rules, CourseCode, 'PE')
+			relevant_program_rules_FE = getRelevantRules(program_rules, CourseCode, 'FE')
+			relevant_program_rules_GE = getRelevantRules(program_rules, CourseCode, 'GE')
+			
+			relevant_stream_rules_DS = getRelevantRules(stream_rules, CourseCode, 'DS')
+			relevant_stream_rules_CC = getRelevantRules(stream_rules, CourseCode, 'CC')
+			relevant_stream_rules_PE = getRelevantRules(stream_rules, CourseCode, 'PE')
+			relevant_stream_rules_FE = getRelevantRules(stream_rules, CourseCode, 'FE')
+			relevant_stream_rules_GE = getRelevantRules(stream_rules, CourseCode, 'GE')
 
-	total_achieved_uoc  = 0
-	for subjectInfo in CompletedSubjects:
-		[CourseCode, Term, SubjectTitle, Mark, Grade, UOC] = subjectInfo
+			relevant_rules.update({'DS':relevant_program_rules_DS + relevant_stream_rules_DS})
+			relevant_rules.update({'CC':relevant_program_rules_CC + relevant_stream_rules_CC})
+			relevant_rules.update({'PE':relevant_program_rules_PE + relevant_stream_rules_PE})
+			relevant_rules.update({'FE':relevant_program_rules_FE + relevant_stream_rules_FE})
+			relevant_rules.update({'GE':relevant_program_rules_GE + relevant_stream_rules_GE})
 
-		# printable strings
-		Mark_str = "  -" if Mark == None else f"{Mark:>3}"
-		
-		suitable_rules = []
-		# check stream rules
-		for stream_rule in rules[stream]:
-			for requirement in stream_rule[-1]:
-				if type(requirement) == list:
-					for code_str in requirement:
-						# result has all possible results of regular expression
-						result = re.findall(code_str, CourseCode)
-						if result:
-							for i in result:
-								# result_info : [rule_name, min_req, max_rea, course_code]
-								result_info =  stream_rule[:-1] + [CourseCode]
-								# append to suitable_list
-								suitable_rules.append({stream_rule[1]: result_info})
+			if debug : print(relevant_rules)
 
-				elif type(requirement) == str and re.match(requirement, CourseCode):
-					# result_info : [rule_name, min_req, max_rea, course_code]
-					result_info =  stream_rule[:-1] + [CourseCode]
-					# append to suitable_list
-					suitable_rules.append({stream_rule[1]: result_info})
+			Toward_str = ""
+			if relevant_rules['CC']:	Toward_str = " + ".join(sorted(relevant_rules['CC'], reverse=True))
+			elif relevant_rules['PE']:	Toward_str = " + ".join(sorted(relevant_rules['PE'], reverse=True))
+			elif relevant_rules['FE']:	Toward_str = " + ".join(sorted(relevant_rules['FE'], reverse=True))
+			elif relevant_rules['GE']:	Toward_str = " + ".join(sorted(relevant_rules['GE'], reverse=True))
+
+			if debug : print()
+			if debug : print(Toward_str)
+
+			# for Toward_rule_name in Toward_str:
+			# 	# remove course from program_rules
+			# 	for i in len(program_rules):
+			# 		if Toward_rule_name == program_rules[i][1]:
+			# 			for j in range(program_rules[i][4]):
+			# 				if type(program_rules[i][4][j]) == list:
+			# 					for k in len(program_rules[i][4][j]):
+			# 						if re.match(program_rules[i][4][j][k], CourseCode):
+										
 
 
-		# check program rules
-		for program_rule in rules[program]:
-			for requirement in program_rule[-1]:
-				if type(requirement) == list:
-					for code_str in requirement:
-						# result has all possible results of regular expression
-						result = re.findall(code_str, CourseCode)
-						if result:
-							for i in result:
-								# result_info : [rule_name, min_req, max_rea, course_code]
-								result_info =  program_rule[:-1] + [CourseCode]
-								# append to suitable_list
-								suitable_rules.append({program_rule[1]: result_info})
-
-				elif type(requirement) == str and re.match(requirement, CourseCode):
-					# result_info : [rule_name, min_req, max_rea, course_code]
-					result_info =  program_rule[:-1] + [CourseCode]
-					# append to suitable_list
-					suitable_rules.append({program_rule[1]: result_info})
-
-		if debug : print("\n\n")
-		if debug : print(suitable_rules)
-		if debug : print(len(suitable_rules))
-
-		Toward_list = []
-		for suitable_rule in suitable_rules:
-			if 'CC' in suitable_rule:
-				Toward_list.append(suitable_rule['CC'][0])
-		if Toward_list == []:
-			for suitable_rule in suitable_rules:
-				if 'PE' in suitable_rule:
-					Toward_list.append(suitable_rule['PE'][0])
-		if Toward_list == []:
-			for suitable_rule in suitable_rules:
-				if 'FE' in suitable_rule:
-					Toward_list.append(suitable_rule['FE'][0])
-		if Toward_list == []:
-			for suitable_rule in suitable_rules:
-				if 'GE' in suitable_rule:
-					Toward_list.append(suitable_rule['GE'][0])
-		if debug : print(Toward_list)
-		Toward_str = " + ".join(Toward_list)
-		if debug : print(Toward_str)
-
-		# uoc calculate
-		if Grade in Grade_in_UOC and Toward_list != []:
-			total_achieved_uoc += UOC
-
-		if Grade in Print_Xuoc:
-			if Toward_str == "":
-				print(f"{CourseCode} {Term} {SubjectTitle:<32s}" + Mark_str + f" {Grade:2s}  0uoc does not satisfy any rule")
-			else:
-				print(f"{CourseCode} {Term} {SubjectTitle:<32s}" + Mark_str + f" {Grade:2s}  {UOC:2d}uoc " + Toward_str)
-		elif Grade in Print_fail:
-			print(f"{CourseCode} {Term} {SubjectTitle:<32s}" + Mark_str + " " + f"{Grade:2s}   fail does not count")
-
-		# remove course in rules[stream]
-		for rule in rules[stream][:]:
-			rules[stream].remove(rule)
-			[rule_name, rule_type, min_req, max_req, courses] = rule
-			for course in courses[:]:
-				if type(course) == list and CourseCode in course:
-					courses.remove(course)
-					if min_req != None and min_req >= UOC: min_req -= UOC
-					if max_req != None and max_req >= UOC: max_req -= UOC
-				elif type(course) == str and re.match(course, CourseCode):
-					courses.remove(course)
-					if min_req != None and min_req >= UOC: min_req -= UOC
-					if max_req != None and max_req >= UOC: max_req -= UOC
-			rule = [rule_name, rule_type, min_req, max_req, courses]
-			rules[stream].append(rule)
-
-		# remove course in rules[program]
-		for rule in rules[program][:]:
-			rules[program].remove(rule)
-			[rule_name, rule_type, min_req, max_req, courses] = rule
-			for course in courses[:]:
-				if type(course) == list and CourseCode in course:
-					courses.remove(course)
-					if min_req != None: min_req -= UOC
-					if max_req != None: max_req -= UOC
-				elif type(course) == str and re.match(course, CourseCode):
-					courses.remove(course)
-					if min_req != None: min_req -= UOC
-					if max_req != None: max_req -= UOC
-			rule = [rule_name, rule_type, min_req, max_req, courses]
-			rules[program].append(rule)
-
-		# drop rule when
-		# 1. [min_req, max_req] = [0, None], []
-
-		if debug : print("\n")
-		if debug : print(rules)
-
-	# print the total uoc
-	print(f"UOC = {total_achieved_uoc} so far")
 
 except Exception as err:
 	print("DB error: ", err)
 finally:
 	if db:
 		db.close()
-

@@ -1,172 +1,112 @@
 5123788 Greenfield, Drew
   8543 Master of Information Technology
   COMPSS Data Science and Engineering
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]}
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 Completed:
+{'DS': [], 'CC': ['PG Core Courses'], 'PE': ['COMPSS Disciplinary Electives'], 'FE': [], 'GE': []}
 
-
-
-[{'PE': ['COMPSS Disciplinary Electives', 'PE', None, 6, 'COMP9021']}, {'CC': ['PG Core Courses', 'CC', None, None, 'COMP9021']}]
-2
-['PG Core Courses']
 PG Core Courses
-COMP9021 17s1 Principles of Programming       100 HD   6uoc PG Core Courses
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 0, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'GSOE92..']]]}
+{'DS': [], 'CC': ['PG Core Courses'], 'PE': ['COMPSS Disciplinary Electives'], 'FE': [], 'GE': []}
 
-
-
-[{'CC': ['PG Core Courses', 'CC', None, None, 'COMP9311']}]
-1
-['PG Core Courses']
 PG Core Courses
-COMP9311 17s1 Database Systems                 63 PS   6uoc PG Core Courses
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9024', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 0, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'GSOE92..']]]}
+{'DS': [], 'CC': ['PG Core Courses'], 'PE': ['COMPSS Disciplinary Electives'], 'FE': [], 'GE': []}
 
-
-
-[{'CC': ['PG Core Courses', 'CC', None, None, 'COMP9024']}]
-1
-['PG Core Courses']
 PG Core Courses
-COMP9024 17s2 Data Structures & Algorithms     86 HD   6uoc PG Core Courses
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 0, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'GSOE92..']]]}
+{'DS': [], 'CC': ['PG Core Courses'], 'PE': ['COMPSS Disciplinary Electives'], 'FE': [], 'GE': []}
 
-
-
-[{'CC': ['PG Core Courses', 'CC', None, None, 'COMP9331']}]
-1
-['PG Core Courses']
 PG Core Courses
-COMP9331 17s2 Computer Networks&Applications   79 DN   6uoc PG Core Courses
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, []], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 0, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'GSOE92..']]]}
+{'DS': [], 'CC': ['Project Management'], 'PE': [], 'FE': [], 'GE': []}
 
-
-
-[{'CC': ['Project Management', 'CC', None, None, 'GSOE9820']}]
-1
-['Project Management']
 Project Management
-GSOE9820 17s2 Project Management               94 HD   6uoc Project Management
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, []], ['PG Core Courses', 'CC', None, None, []], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 0, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'GSOE92..']]]}
+{'DS': [], 'CC': [], 'PE': ['COMPSS Disciplinary Electives'], 'FE': [], 'GE': []}
+
+COMPSS Disciplinary Electives
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 
+{'DS': [], 'CC': [], 'PE': ['COMPSS Disciplinary Electives'], 'FE': [], 'GE': []}
 
-[]
-0
-[]
-
-COMP9020 18s1 Foundations of Comp. Science     85 HD  0uoc does not satisfy any rule
-
-
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, []], ['PG Core Courses', 'CC', None, None, []], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 0, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'GSOE92..']]]}
+COMPSS Disciplinary Electives
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 
+{'DS': [], 'CC': [], 'PE': ['ADK Courses', 'COMPSS Databases Electives', 'COMPSS Disciplinary Electives'], 'FE': [], 'GE': []}
 
-[]
-0
-[]
-
-COMP9414 18s1 Artificial Intelligence          91 HD  0uoc does not satisfy any rule
-
-
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, []], ['PG Core Courses', 'CC', None, None, []], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 0, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'GSOE92..']]]}
+COMPSS Disciplinary Electives + COMPSS Databases Electives + ADK Courses
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 
+{'DS': [], 'CC': [], 'PE': ['ADK Courses', 'COMPSS Machine Learning Electives', 'COMPSS Disciplinary Electives'], 'FE': [], 'GE': []}
 
-[{'PE': ['COMPSS Databases Electives', 'PE', 6, 12, 'COMP9315']}, {'PE': ['ADK Courses', 'PE', 36, 36, 'COMP9315']}]
-2
-['COMPSS Databases Electives', 'ADK Courses']
-COMPSS Databases Electives + ADK Courses
-COMP9315 18s2 Database Systems Implementat'n   76 DN   6uoc COMPSS Databases Electives + ADK Courses
-
-
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, []], ['PG Core Courses', 'CC', None, None, []], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 30, 30, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 0, 6, ['COMP9313', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 0, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'GSOE92..']]]}
+COMPSS Machine Learning Electives + COMPSS Disciplinary Electives + ADK Courses
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 
+{'DS': [], 'CC': [], 'PE': ['ADK Courses', 'COMPSS Machine Learning Electives', 'COMPSS Disciplinary Electives'], 'FE': [], 'GE': []}
 
-[{'PE': ['COMPSS Machine Learning Electives', 'PE', 6, 12, 'COMP9444']}, {'PE': ['ADK Courses', 'PE', 30, 30, 'COMP9444']}]
-2
-['COMPSS Machine Learning Electives', 'ADK Courses']
-COMPSS Machine Learning Electives + ADK Courses
-COMP9444 18s2 Neural Networks, Deep Learning   63 PS   6uoc COMPSS Machine Learning Electives + ADK Courses
-
-
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, []], ['PG Core Courses', 'CC', None, None, []], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 24, 24, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 0, 6, ['COMP9313', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 0, 6, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836']], ['COMPSS Disciplinary Electives', 'PE', None, 0, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'GSOE92..']]]}
+COMPSS Machine Learning Electives + COMPSS Disciplinary Electives + ADK Courses
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 
+{'DS': [], 'CC': [], 'PE': ['COMPSS Databases Electives', 'COMPSS Disciplinary Electives'], 'FE': [], 'GE': []}
 
-[{'PE': ['COMPSS Machine Learning Electives', 'PE', 0, 6, 'COMP9417']}, {'PE': ['ADK Courses', 'PE', 24, 24, 'COMP9417']}]
-2
-['COMPSS Machine Learning Electives', 'ADK Courses']
-COMPSS Machine Learning Electives + ADK Courses
-COMP9417 19T2 Machine Learning & Data Mining   96 HD   6uoc COMPSS Machine Learning Electives + ADK Courses
-
-
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, []], ['PG Core Courses', 'CC', None, None, []], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 18, 18, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9418', 'COMP9434', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 0, 6, ['COMP9313', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 0, 0, ['COMP4418', 'COMP6714', 'MATH5836']], ['COMPSS Disciplinary Electives', 'PE', None, 0, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'GSOE92..']]]}
+COMPSS Disciplinary Electives + COMPSS Databases Electives
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 
-
-[{'PE': ['COMPSS Databases Electives', 'PE', 0, 6, 'COMP9313']}]
-1
-['COMPSS Databases Electives']
-COMPSS Databases Electives
-COMP9313 19T3 Big Data Management              76 DN   6uoc COMPSS Databases Electives
+{'DS': [], 'CC': [], 'PE': [], 'FE': [], 'GE': []}
 
 
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, []], ['PG Core Courses', 'CC', None, None, []], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 18, 18, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9418', 'COMP9434', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 0, 0, ['COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 0, 0, ['COMP4418', 'COMP6714', 'MATH5836']], ['COMPSS Disciplinary Electives', 'PE', None, 0, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'GSOE92..']]]}
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 
-
-[]
-0
-[]
-
-MATH5846 20T1 Intro to Prob and Stoch Proc      - SY  0uoc does not satisfy any rule
+{'DS': [], 'CC': [], 'PE': [], 'FE': [], 'GE': []}
 
 
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, []], ['PG Core Courses', 'CC', None, None, []], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 18, 18, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9418', 'COMP9434', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 0, 0, ['COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 0, 0, ['COMP4418', 'COMP6714', 'MATH5836']], ['COMPSS Disciplinary Electives', 'PE', None, 0, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'GSOE92..']]]}
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 
+{'DS': [], 'CC': ['MIT Project Courses'], 'PE': ['COMPSS Disciplinary Electives'], 'FE': [], 'GE': []}
 
-[]
-0
-[]
-
-MATH5856 20T1 Intro to Stats and Stat Comput    - SY  0uoc does not satisfy any rule
-
-
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, []], ['PG Core Courses', 'CC', None, None, []], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 18, 18, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9418', 'COMP9434', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 0, 0, ['COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 0, 0, ['COMP4418', 'COMP6714', 'MATH5836']], ['COMPSS Disciplinary Electives', 'PE', None, 0, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'GSOE92..']]]}
-
-
-
-[{'CC': ['MIT Project Courses', 'CC', None, None, 'COMP9900']}]
-1
-['MIT Project Courses']
 MIT Project Courses
-COMP9900 20T2 Info Tech Project               100 HD   6uoc MIT Project Courses
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, []], ['PG Core Courses', 'CC', None, None, []], ['MIT Project Courses', 'CC', None, None, []], ['ADK Courses', 'PE', 18, 18, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9418', 'COMP9434', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 0, 0, ['COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 0, 0, ['COMP4418', 'COMP6714', 'MATH5836']], ['COMPSS Disciplinary Electives', 'PE', None, 0, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'GSOE92..']]]}
+{'DS': [], 'CC': [], 'PE': ['COMPSS Algos/Stats Electives'], 'FE': [], 'GE': []}
 
-
-
-[{'PE': ['COMPSS Algos/Stats Electives', 'PE', 6, 12, 'MATH5855']}]
-1
-['COMPSS Algos/Stats Electives']
 COMPSS Algos/Stats Electives
-MATH5855 20T3 Multivariate Analysis           100 HD   6uoc COMPSS Algos/Stats Electives
+[['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, ['GSOE9820']], ['PG Core Courses', 'CC', None, None, ['COMP9021', 'COMP9024', 'COMP9311', 'COMP9331']], ['MIT Project Courses', 'CC', None, None, [['COMP9900', 'COMP9991']]], ['ADK Courses', 'PE', 36, 36, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9417', 'COMP9418', 'COMP9434', 'COMP9444', 'COMP9517', 'COMP9992', 'COMP9993']]]
+[['COMPSS Algos/Stats Electives', 'PE', 6, 12, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5855', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 6, 12, ['COMP9313', 'COMP9315', 'COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 6, 12, ['COMP4418', 'COMP6714', 'COMP9417', 'MATH5836', 'COMP9444']], ['COMPSS Disciplinary Electives', 'PE', None, 6, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'COMP9...', 'GSOE92..']]]
 
 
-{'8543': [['MIT Streams', 'DS', 1, 1, ['COMPAS', 'COMPBS', 'COMPCS', 'COMPDS', 'COMPES', 'COMPIS', 'COMPSS']], ['Project Management', 'CC', None, None, []], ['PG Core Courses', 'CC', None, None, []], ['MIT Project Courses', 'CC', None, None, []], ['ADK Courses', 'PE', 18, 18, ['COMP4121', 'COMP4161', 'COMP4418', 'COMP6714', 'COMP9153', 'COMP9242', 'COMP9243', 'COMP9318', 'COMP9319', 'COMP9323', 'COMP9334', 'COMP9336', 'COMP9418', 'COMP9434', 'COMP9517', 'COMP9992', 'COMP9993']]], 'COMPSS': [['COMPSS Algos/Stats Electives', 'PE', 0, 6, ['COMP4141', 'COMP6741', 'MATH5845', 'MATH5905', 'MATH5960']], ['COMPSS Databases Electives', 'PE', 0, 0, ['COMP9318', 'COMP9319', 'COMP9321']], ['COMPSS Machine Learning Electives', 'PE', 0, 0, ['COMP4418', 'COMP6714', 'MATH5836']], ['COMPSS Disciplinary Electives', 'PE', None, 0, ['BINF6...', 'BINF9...', 'COMP4...', 'COMP6...', 'GSOE92..']]]}
-UOC = 66 so far
