@@ -1,96 +1,25 @@
 5198386 Dib, Karim
   3778 Bachelor of Science (Comp Sci)
   COMPA1 Computer Science
-[['Comp Sci Majors', 'DS', 1, 1, ['COMPA1', 'COMPD1', 'COMPE1', 'COMPI1', 'COMPJ1', 'COMPN1', 'COMPS1', 'COMPY1']], ['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['Comp Sci Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241']]], ['Comp Sci Advanced Core', 'CC', None, None, [['COMP3121', 'COMP3821'], 'COMP3900', 'COMP4920']], ['General Education', 'GE', 12, 12, ['GEN.....']]]
-[['COMPA1 Computing Electives', 'PE', 30, None, ['ENGG2600', 'ENG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...']], ['COMPA1 Free Electives', 'FE', 36, None, ['FREE....']]]
 
 Completed:
-{'DS': [], 'CC': ['Foundational Computing'], 'PE': [], 'FE': [], 'GE': []}
+COMP1511 19T1 Programming Fundamentals         62 PS   6uoc towards Foundational Computing
+ENGG1000 19T1 Engineering Design               51 PS   6uoc towards Free Electives
+MATH1131 19T1 Mathematics 1A                   54 PS   6uoc towards Comp Sci Maths
+CHEM1011 19T2 Chemistry 1A                     87 HD   6uoc towards Free Electives
+COMP1521 19T2 Computer Systems Fundamentals    47 FL   fail does not count
+MATH1081 19T2 Discrete Mathematics             71 CR   6uoc towards Comp Sci Maths
+COMP1521 19T3 Computer Systems Fundamentals    58 PS   6uoc towards Foundational Computing
+COMP1531 19T3 Software Eng Fundamentals        67 CR   6uoc towards Foundational Computing
+MATH1231 19T3 Mathematics 1B                   56 PS   6uoc towards Comp Sci Maths
+COMP2521 20T1 Data Structures and Algorithms    - SY   6uoc towards Foundational Computing
+SENG2021 20T1 Reqts & Design Workshop          65 CR   6uoc towards Free Electives
+COMP2041 20T2 Software Construction            46 FL   fail does not count
+DESN2000 20T2 Engineering Design 2             80 DN   6uoc towards Free Electives
+MATH2400 20T2 Finite Mathematics               35 FL   fail does not count
+MATH2859 20T2 Prob, Stats and Information      31 FL   fail does not count
+COMP2511 20T3 O-O Design & Programming         32 FL   fail does not count
+COMP3311 20T3 Database Systems                 75 DN   6uoc towards COMPA1 Computing Electives
+UOC = 72 so far
 
-Foundational Computing
-[['Comp Sci Majors', 'DS', 1, 1, ['COMPA1', 'COMPD1', 'COMPE1', 'COMPI1', 'COMPJ1', 'COMPN1', 'COMPS1', 'COMPY1']], ['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['Comp Sci Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241']]], ['Comp Sci Advanced Core', 'CC', None, None, [['COMP3121', 'COMP3821'], 'COMP3900', 'COMP4920']], ['General Education', 'GE', 12, 12, ['GEN.....']]]
-[['COMPA1 Computing Electives', 'PE', 30, None, ['ENGG2600', 'ENG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...']], ['COMPA1 Free Electives', 'FE', 36, None, ['FREE....']]]
-
-
-{'DS': [], 'CC': [], 'PE': [], 'FE': [], 'GE': []}
-
-
-[['Comp Sci Majors', 'DS', 1, 1, ['COMPA1', 'COMPD1', 'COMPE1', 'COMPI1', 'COMPJ1', 'COMPN1', 'COMPS1', 'COMPY1']], ['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['Comp Sci Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241']]], ['Comp Sci Advanced Core', 'CC', None, None, [['COMP3121', 'COMP3821'], 'COMP3900', 'COMP4920']], ['General Education', 'GE', 12, 12, ['GEN.....']]]
-[['COMPA1 Computing Electives', 'PE', 30, None, ['ENGG2600', 'ENG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...']], ['COMPA1 Free Electives', 'FE', 36, None, ['FREE....']]]
-
-
-{'DS': [], 'CC': ['Comp Sci Maths'], 'PE': [], 'FE': [], 'GE': []}
-
-Comp Sci Maths
-[['Comp Sci Majors', 'DS', 1, 1, ['COMPA1', 'COMPD1', 'COMPE1', 'COMPI1', 'COMPJ1', 'COMPN1', 'COMPS1', 'COMPY1']], ['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['Comp Sci Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241']]], ['Comp Sci Advanced Core', 'CC', None, None, [['COMP3121', 'COMP3821'], 'COMP3900', 'COMP4920']], ['General Education', 'GE', 12, 12, ['GEN.....']]]
-[['COMPA1 Computing Electives', 'PE', 30, None, ['ENGG2600', 'ENG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...']], ['COMPA1 Free Electives', 'FE', 36, None, ['FREE....']]]
-
-
-{'DS': [], 'CC': [], 'PE': [], 'FE': [], 'GE': []}
-
-
-[['Comp Sci Majors', 'DS', 1, 1, ['COMPA1', 'COMPD1', 'COMPE1', 'COMPI1', 'COMPJ1', 'COMPN1', 'COMPS1', 'COMPY1']], ['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['Comp Sci Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241']]], ['Comp Sci Advanced Core', 'CC', None, None, [['COMP3121', 'COMP3821'], 'COMP3900', 'COMP4920']], ['General Education', 'GE', 12, 12, ['GEN.....']]]
-[['COMPA1 Computing Electives', 'PE', 30, None, ['ENGG2600', 'ENG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...']], ['COMPA1 Free Electives', 'FE', 36, None, ['FREE....']]]
-
-
-COMP1521 19T2 Computer Systems Fundamentals    47   fail does not count
-{'DS': [], 'CC': ['Comp Sci Maths'], 'PE': [], 'FE': [], 'GE': []}
-
-Comp Sci Maths
-[['Comp Sci Majors', 'DS', 1, 1, ['COMPA1', 'COMPD1', 'COMPE1', 'COMPI1', 'COMPJ1', 'COMPN1', 'COMPS1', 'COMPY1']], ['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['Comp Sci Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241']]], ['Comp Sci Advanced Core', 'CC', None, None, [['COMP3121', 'COMP3821'], 'COMP3900', 'COMP4920']], ['General Education', 'GE', 12, 12, ['GEN.....']]]
-[['COMPA1 Computing Electives', 'PE', 30, None, ['ENGG2600', 'ENG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...']], ['COMPA1 Free Electives', 'FE', 36, None, ['FREE....']]]
-
-
-{'DS': [], 'CC': ['Foundational Computing'], 'PE': [], 'FE': [], 'GE': []}
-
-Foundational Computing
-[['Comp Sci Majors', 'DS', 1, 1, ['COMPA1', 'COMPD1', 'COMPE1', 'COMPI1', 'COMPJ1', 'COMPN1', 'COMPS1', 'COMPY1']], ['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['Comp Sci Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241']]], ['Comp Sci Advanced Core', 'CC', None, None, [['COMP3121', 'COMP3821'], 'COMP3900', 'COMP4920']], ['General Education', 'GE', 12, 12, ['GEN.....']]]
-[['COMPA1 Computing Electives', 'PE', 30, None, ['ENGG2600', 'ENG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...']], ['COMPA1 Free Electives', 'FE', 36, None, ['FREE....']]]
-
-
-{'DS': [], 'CC': ['Foundational Computing'], 'PE': [], 'FE': [], 'GE': []}
-
-Foundational Computing
-[['Comp Sci Majors', 'DS', 1, 1, ['COMPA1', 'COMPD1', 'COMPE1', 'COMPI1', 'COMPJ1', 'COMPN1', 'COMPS1', 'COMPY1']], ['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['Comp Sci Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241']]], ['Comp Sci Advanced Core', 'CC', None, None, [['COMP3121', 'COMP3821'], 'COMP3900', 'COMP4920']], ['General Education', 'GE', 12, 12, ['GEN.....']]]
-[['COMPA1 Computing Electives', 'PE', 30, None, ['ENGG2600', 'ENG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...']], ['COMPA1 Free Electives', 'FE', 36, None, ['FREE....']]]
-
-
-{'DS': [], 'CC': ['Comp Sci Maths'], 'PE': [], 'FE': [], 'GE': []}
-
-Comp Sci Maths
-[['Comp Sci Majors', 'DS', 1, 1, ['COMPA1', 'COMPD1', 'COMPE1', 'COMPI1', 'COMPJ1', 'COMPN1', 'COMPS1', 'COMPY1']], ['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['Comp Sci Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241']]], ['Comp Sci Advanced Core', 'CC', None, None, [['COMP3121', 'COMP3821'], 'COMP3900', 'COMP4920']], ['General Education', 'GE', 12, 12, ['GEN.....']]]
-[['COMPA1 Computing Electives', 'PE', 30, None, ['ENGG2600', 'ENG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...']], ['COMPA1 Free Electives', 'FE', 36, None, ['FREE....']]]
-
-
-{'DS': [], 'CC': ['Foundational Computing'], 'PE': [], 'FE': [], 'GE': []}
-
-Foundational Computing
-[['Comp Sci Majors', 'DS', 1, 1, ['COMPA1', 'COMPD1', 'COMPE1', 'COMPI1', 'COMPJ1', 'COMPN1', 'COMPS1', 'COMPY1']], ['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['Comp Sci Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241']]], ['Comp Sci Advanced Core', 'CC', None, None, [['COMP3121', 'COMP3821'], 'COMP3900', 'COMP4920']], ['General Education', 'GE', 12, 12, ['GEN.....']]]
-[['COMPA1 Computing Electives', 'PE', 30, None, ['ENGG2600', 'ENG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...']], ['COMPA1 Free Electives', 'FE', 36, None, ['FREE....']]]
-
-
-{'DS': [], 'CC': [], 'PE': [], 'FE': [], 'GE': []}
-
-
-[['Comp Sci Majors', 'DS', 1, 1, ['COMPA1', 'COMPD1', 'COMPE1', 'COMPI1', 'COMPJ1', 'COMPN1', 'COMPS1', 'COMPY1']], ['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['Comp Sci Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241']]], ['Comp Sci Advanced Core', 'CC', None, None, [['COMP3121', 'COMP3821'], 'COMP3900', 'COMP4920']], ['General Education', 'GE', 12, 12, ['GEN.....']]]
-[['COMPA1 Computing Electives', 'PE', 30, None, ['ENGG2600', 'ENG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...']], ['COMPA1 Free Electives', 'FE', 36, None, ['FREE....']]]
-
-
-COMP2041 20T2 Software Construction            46   fail does not count
-{'DS': [], 'CC': [], 'PE': [], 'FE': [], 'GE': []}
-
-
-[['Comp Sci Majors', 'DS', 1, 1, ['COMPA1', 'COMPD1', 'COMPE1', 'COMPI1', 'COMPJ1', 'COMPN1', 'COMPS1', 'COMPY1']], ['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['Comp Sci Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241']]], ['Comp Sci Advanced Core', 'CC', None, None, [['COMP3121', 'COMP3821'], 'COMP3900', 'COMP4920']], ['General Education', 'GE', 12, 12, ['GEN.....']]]
-[['COMPA1 Computing Electives', 'PE', 30, None, ['ENGG2600', 'ENG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...']], ['COMPA1 Free Electives', 'FE', 36, None, ['FREE....']]]
-
-
-MATH2400 20T2 Finite Mathematics               35   fail does not count
-MATH2859 20T2 Prob, Stats and Information      31   fail does not count
-COMP2511 20T3 O-O Design & Programming         32   fail does not count
-{'DS': [], 'CC': [], 'PE': ['COMPA1 Computing Electives'], 'FE': [], 'GE': []}
-
-COMPA1 Computing Electives
-[['Comp Sci Majors', 'DS', 1, 1, ['COMPA1', 'COMPD1', 'COMPE1', 'COMPI1', 'COMPJ1', 'COMPN1', 'COMPS1', 'COMPY1']], ['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['Comp Sci Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241']]], ['Comp Sci Advanced Core', 'CC', None, None, [['COMP3121', 'COMP3821'], 'COMP3900', 'COMP4920']], ['General Education', 'GE', 12, 12, ['GEN.....']]]
-[['COMPA1 Computing Electives', 'PE', 30, None, ['ENGG2600', 'ENG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...']], ['COMPA1 Free Electives', 'FE', 36, None, ['FREE....']]]
-
-
+Remaining to complete degree:
