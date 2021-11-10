@@ -339,10 +339,16 @@ def PrintCC(db, name, min_req, max_req, subjects):
 		else:
 			for i in range(len(subject)):
 				subject_info = getSubjectNameByCode(db, subject[i])
-				if i == 1:
-					print(f"  or {subject[i]} {subject_info[1]}")
+				if subject_info != None:
+					if i == 1:
+						print(f"  or {subject[i]} {subject_info[1]}")
+					else:
+						print(f"- {subject[i]} {subject_info[1]}")
 				else:
-					print(f"- {subject[i]} {subject_info[1]}")
+					if i == 1:
+						print(f"  or {subject[i]} ???")
+					else:
+						print(f"- {subject[i]} ???")
 	return
 
 def PrintGE(UOC):

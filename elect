@@ -1,0 +1,10 @@
+              name              | type | min_req | max_req |                               course_requirements                                
+--------------------------------+------+---------+---------+----------------------------------------------------------------------------------
+ Foundational Computing         | CC   |         |         | COMP1511,COMP1521,COMP1531,COMP2511,COMP2521
+ COMPBH Maths                   | CC   |         |         | {MATH1131;MATH1141},{MATH1231;MATH1241},MATH2069,MATH2099
+ COMPBH Physics and Electronics | CC   |         |         | {PHYS1121;PHYS1131},{PHYS1221;PHYS1231},ELEC1111,ELEC2133,ELEC2134
+ COMPBH Design                  | CC   |         |         | {ENGG1000;DESN1000},DESN2000
+ COMPBH Advanced Core           | CC   |         |         | COMP3211,COMP3222,COMP3231,COMP3601,COMP4601,COMP4920,COMP4951,COMP4952,COMP4953
+ COMPBH Computing Electives     | PE   |      36 |         | ENGG2600,ENGG3060,ENGG3600,ENGG4600,COMP3###,COMP4###,COMP6###,COMP9###
+(6 rows)
+
