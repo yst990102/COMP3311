@@ -1,23 +1,194 @@
 5198386 Dib, Karim
   3707 Bachelor of Engineering (Hons)
   SENGAH Software Engineering
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP1511', 'COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['SENGAH Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241'], 'MATH2400', 'MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['ENGG1000', 'DESN2000', 'SENG2011', 'SENG2021', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP2041', 'COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
 
 Completed:
-COMP1511 19T1 Programming Fundamentals         62 PS   6uoc towards Foundational Computing
-ENGG1000 19T1 Engineering Design               51 PS   6uoc towards SENGAH Workshops/Design
-MATH1131 19T1 Mathematics 1A                   54 PS   6uoc towards SENGAH Maths
-CHEM1011 19T2 Chemistry 1A                     87 HD   6uoc does not satisfy any rule
+
+
+
+[{'CC': ['Foundational Computing', 'CC', None, None, 'COMP1511']}]
+1
+['Foundational Computing']
+Foundational Computing
+COMP1511 19T1 Programming Fundamentals         62 PS   6uoc Foundational Computing
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['SENGAH Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241'], 'MATH2400', 'MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['ENGG1000', 'DESN2000', 'SENG2011', 'SENG2021', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP2041', 'COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[{'CC': ['SENGAH Workshops/Design', 'CC', None, None, 'ENGG1000']}]
+1
+['SENGAH Workshops/Design']
+SENGAH Workshops/Design
+ENGG1000 19T1 Engineering Design               51 PS   6uoc SENGAH Workshops/Design
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['SENGAH Maths', 'CC', None, None, ['MATH1081', ['MATH1131', 'MATH1141'], ['MATH1231', 'MATH1241'], 'MATH2400', 'MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['DESN2000', 'SENG2011', 'SENG2021', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP2041', 'COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[{'CC': ['SENGAH Maths', 'CC', None, None, 'MATH1131']}]
+1
+['SENGAH Maths']
+SENGAH Maths
+MATH1131 19T1 Mathematics 1A                   54 PS   6uoc SENGAH Maths
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['SENGAH Maths', 'CC', None, None, ['MATH1081', ['MATH1231', 'MATH1241'], 'MATH2400', 'MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['DESN2000', 'SENG2011', 'SENG2021', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP2041', 'COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[]
+0
+[]
+
+CHEM1011 19T2 Chemistry 1A                     87 HD  0uoc does not satisfy any rule
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP1521', 'COMP1531', 'COMP2511', 'COMP2521']], ['SENGAH Maths', 'CC', None, None, ['MATH1081', ['MATH1231', 'MATH1241'], 'MATH2400', 'MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['DESN2000', 'SENG2011', 'SENG2021', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP2041', 'COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[{'CC': ['Foundational Computing', 'CC', None, None, 'COMP1521']}]
+1
+['Foundational Computing']
+Foundational Computing
 COMP1521 19T2 Computer Systems Fundamentals    47 FL   fail does not count
-MATH1081 19T2 Discrete Mathematics             71 CR   6uoc towards SENGAH Maths
-COMP1521 19T3 Computer Systems Fundamentals    58 PS   6uoc towards Foundational Computing
-COMP1531 19T3 Software Eng Fundamentals        67 CR   6uoc towards Foundational Computing
-MATH1231 19T3 Mathematics 1B                   56 PS   6uoc towards SENGAH Maths
-COMP2521 20T1 Data Structures and Algorithms    - SY   6uoc towards Foundational Computing
-SENG2021 20T1 Reqts & Design Workshop          65 CR   6uoc towards SENGAH Workshops/Design
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP1531', 'COMP2511', 'COMP2521']], ['SENGAH Maths', 'CC', None, None, ['MATH1081', ['MATH1231', 'MATH1241'], 'MATH2400', 'MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['DESN2000', 'SENG2011', 'SENG2021', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP2041', 'COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[{'CC': ['SENGAH Maths', 'CC', None, None, 'MATH1081']}]
+1
+['SENGAH Maths']
+SENGAH Maths
+MATH1081 19T2 Discrete Mathematics             71 CR   6uoc SENGAH Maths
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP1531', 'COMP2511', 'COMP2521']], ['SENGAH Maths', 'CC', None, None, [['MATH1231', 'MATH1241'], 'MATH2400', 'MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['DESN2000', 'SENG2011', 'SENG2021', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP2041', 'COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[]
+0
+[]
+
+COMP1521 19T3 Computer Systems Fundamentals    58 PS  0uoc does not satisfy any rule
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP1531', 'COMP2511', 'COMP2521']], ['SENGAH Maths', 'CC', None, None, [['MATH1231', 'MATH1241'], 'MATH2400', 'MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['DESN2000', 'SENG2011', 'SENG2021', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP2041', 'COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[{'CC': ['Foundational Computing', 'CC', None, None, 'COMP1531']}]
+1
+['Foundational Computing']
+Foundational Computing
+COMP1531 19T3 Software Eng Fundamentals        67 CR   6uoc Foundational Computing
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP2511', 'COMP2521']], ['SENGAH Maths', 'CC', None, None, [['MATH1231', 'MATH1241'], 'MATH2400', 'MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['DESN2000', 'SENG2011', 'SENG2021', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP2041', 'COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[{'CC': ['SENGAH Maths', 'CC', None, None, 'MATH1231']}]
+1
+['SENGAH Maths']
+SENGAH Maths
+MATH1231 19T3 Mathematics 1B                   56 PS   6uoc SENGAH Maths
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP2511', 'COMP2521']], ['SENGAH Maths', 'CC', None, None, ['MATH2400', 'MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['DESN2000', 'SENG2011', 'SENG2021', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP2041', 'COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[{'CC': ['Foundational Computing', 'CC', None, None, 'COMP2521']}]
+1
+['Foundational Computing']
+Foundational Computing
+COMP2521 20T1 Data Structures and Algorithms    - SY   6uoc Foundational Computing
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP2511']], ['SENGAH Maths', 'CC', None, None, ['MATH2400', 'MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['DESN2000', 'SENG2011', 'SENG2021', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP2041', 'COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[{'CC': ['SENGAH Workshops/Design', 'CC', None, None, 'SENG2021']}]
+1
+['SENGAH Workshops/Design']
+SENGAH Workshops/Design
+SENG2021 20T1 Reqts & Design Workshop          65 CR   6uoc SENGAH Workshops/Design
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP2511']], ['SENGAH Maths', 'CC', None, None, ['MATH2400', 'MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['DESN2000', 'SENG2011', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP2041', 'COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[{'CC': ['SENGAH Advanced Core', 'CC', None, None, 'COMP2041']}]
+1
+['SENGAH Advanced Core']
+SENGAH Advanced Core
 COMP2041 20T2 Software Construction            46 FL   fail does not count
-DESN2000 20T2 Engineering Design 2             80 DN   6uoc towards SENGAH Workshops/Design
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP2511']], ['SENGAH Maths', 'CC', None, None, ['MATH2400', 'MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['DESN2000', 'SENG2011', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[{'CC': ['SENGAH Workshops/Design', 'CC', None, None, 'DESN2000']}]
+1
+['SENGAH Workshops/Design']
+SENGAH Workshops/Design
+DESN2000 20T2 Engineering Design 2             80 DN   6uoc SENGAH Workshops/Design
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP2511']], ['SENGAH Maths', 'CC', None, None, ['MATH2400', 'MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['SENG2011', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[{'CC': ['SENGAH Maths', 'CC', None, None, 'MATH2400']}]
+1
+['SENGAH Maths']
+SENGAH Maths
 MATH2400 20T2 Finite Mathematics               35 FL   fail does not count
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP2511']], ['SENGAH Maths', 'CC', None, None, ['MATH2859']], ['SENGAH Workshops/Design', 'CC', None, None, ['SENG2011', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[{'CC': ['SENGAH Maths', 'CC', None, None, 'MATH2859']}]
+1
+['SENGAH Maths']
+SENGAH Maths
 MATH2859 20T2 Prob, Stats and Information      31 FL   fail does not count
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, ['COMP2511']], ['SENGAH Maths', 'CC', None, None, []], ['SENGAH Workshops/Design', 'CC', None, None, ['SENG2011', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[{'CC': ['Foundational Computing', 'CC', None, None, 'COMP2511']}]
+1
+['Foundational Computing']
+Foundational Computing
 COMP2511 20T3 O-O Design & Programming         32 FL   fail does not count
-COMP3311 20T3 Database Systems                 75 DN   6uoc towards SENGAH Advanced Core
-UOC = 66 so far
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, []], ['SENGAH Maths', 'CC', None, None, []], ['SENGAH Workshops/Design', 'CC', None, None, ['SENG2011', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP3141', 'COMP3311', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 36, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP3...', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+
+
+
+[{'CC': ['SENGAH Advanced Core', 'CC', None, None, 'COMP3311']}, {'PE': ['SENGAH Discipline Electives', 'PE', 36, None, 'COMP3311']}]
+2
+['SENGAH Advanced Core']
+SENGAH Advanced Core
+COMP3311 20T3 Database Systems                 75 DN   6uoc SENGAH Advanced Core
+
+
+{'3707': [['BE(Hons) Streams', 'DS', 1, 1, ['AEROAH', 'BINFAH', 'CEICAH', 'CEICDH', 'COMPBH', 'CVENAH', 'CVENBH', 'ELECAH', 'ELECCH', 'GMATDH', 'MANFBH', 'MECHAH', 'MINEAH', 'MTRNAH', 'PETRAH', 'SENGAH', 'SOLAAH', 'SOLABH', 'TELEAH']], ['Industrial Training', 'CC', None, None, ['ENGG4999']], ['General Education', 'GE', 12, 12, ['GEN.....']]], 'SENGAH': [['Foundational Computing', 'CC', None, None, []], ['SENGAH Maths', 'CC', None, None, []], ['SENGAH Workshops/Design', 'CC', None, None, ['SENG2011', 'SENG3011']], ['SENGAH Advanced Core', 'CC', None, None, ['COMP3141', 'COMP3331', 'SENG4920', 'COMP4951', 'COMP4952', 'COMP4953']], ['SENGAH Discipline Electives', 'PE', 30, None, ['ENGG2600', 'ENGG3060', 'ENGG3600', 'ENGG4600', 'COMP4...', 'COMP6...', 'COMP9...', 'INFS3...', 'INFS4...', 'MATH3...', 'MATH4...', 'MATH6...', 'ELEC3...', 'ELEC4...', 'TELE3...', 'TELE4...']], ['SENGAH Free Electives', 'FE', 6, 6, ['FREE....']]]}
+UOC = 60 so far

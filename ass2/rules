@@ -45,16 +45,16 @@ try:
 		for detail_progInfo in detail_progInfos:
 			[name, type, min_req, max_req, def_info] = detail_progInfo
 			if type == 'DS':
-				# streams = detail_progInfo[-1]
+				# streams = def_info
 				PrintDS(db, name, min_req, max_req, def_info)
 			elif type == 'CC':
-				# subjects = detail_progInfo[-1]
+				# subjects = def_info
 				PrintCC(db, name, min_req, max_req, def_info)
 			elif type == 'PE':
-				# subjects = detail_progInfo[-1]
+				# subjects = def_info
 				PrintPE(db, name, min_req, max_req, def_info)
 			elif type == 'FE':
-				# subjects = detail_progInfo[-1]
+				# subjects = def_info
 				PrintFE(db, name, min_req, max_req, def_info)
 			elif type == 'GE':
 				UOC = min_req
@@ -77,16 +77,16 @@ try:
 		for detail_streamInfo in detail_streamInfos:
 			[name, type, min_req, max_req, def_info] = detail_streamInfo
 			if type == 'DS':
-				# streams = detail_streamInfo[-1]
+				# streams = def_info
 				PrintDS(db, name, min_req, max_req, def_info)
 			elif type == 'CC':
-				# subjects = detail_streamInfo[-1]
+				# subjects = def_info
 				PrintCC(db, name, min_req, max_req, def_info)
 			elif type == 'PE':
-				# subjects = detail_streamInfo[-1]
+				# subjects = def_info
 				PrintPE(db, name, min_req, max_req, def_info)
 			elif type == 'FE':
-				# subjects = detail_streamInfo[-1]
+				# subjects = def_info
 				PrintFE(db, name, min_req, max_req, def_info)
 			elif type == 'GE':
 				UOC = min_req

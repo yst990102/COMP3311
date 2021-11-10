@@ -4,7 +4,7 @@
 import sys
 import psycopg2
 import re
-from helpers import getStudent, getTranscriptInfo
+from helpers import Grade_in_UOC, Grade_in_WAM, Print_Xuoc, Print_fail, getStudent, getTranscriptInfo
 
 # define any local helper functions here
 
@@ -42,13 +42,6 @@ try:
 
 	# get the infos for transcripts
 	trans_infos = getTranscriptInfo(db, zid)
-
-	Grade_in_UOC  = ['A','B','C','D','HD','DN','CR','PS','XE','T','SY','EC','NC']
-	Grade_in_WAM  = ['HD','DN','CR','PS','AF','FL','UF']
-
-	Print_Xuoc = ['A','B','C','D','HD','DN','CR','PS','XE','T','SY','EC','NC']
-	Print_fail = ['AF','FL','UF']
-	Print_none = ['AS','AW','PW','RD','NF','LE','PE','WD','WJ']
 
 	weighted_mark_sum   = 0
 	total_attempted_uoc = 0

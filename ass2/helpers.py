@@ -4,6 +4,14 @@
 
 import re
 
+Grade_in_UOC  = ['A','B','C','D','HD','DN','CR','PS','XE','T','SY','EC','NC']
+Grade_in_WAM  = ['HD','DN','CR','PS','AF','FL','UF']
+
+Print_Xuoc = ['A','B','C','D','HD','DN','CR','PS','XE','T','SY','EC','NC']
+Print_fail = ['AF','FL','UF']
+Print_none = ['AS','AW','PW','RD','NF','LE','PE','WD','WJ']
+
+
 def getProgram(db,code):
 	cur = db.cursor()
 	cur.execute("select * from Programs where code = %s",[code])
