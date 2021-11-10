@@ -296,7 +296,8 @@ def getProgramRules(db, programcode):
 
 
 
-# ================ print functions ==================
+# ================ print functions ================
+# ================ Q2 ================
 # ======== Program part
 def PrintBasicProgramInfo(info):
 	[id, name, uoc, duration, offeredby] = info
@@ -359,10 +360,6 @@ def PrintCC(db, name, min_req, max_req, subjects):
 						print(f"- {subject[i]} ???")
 	return
 
-def PrintGE(UOC):
-	print(f"{UOC} UOC of General Education")
-	return
-
 def PrintPE(db, name, min_req, max_req, subjects):
 	subject_list = subjects.split(",")
 	if min_req != None and max_req != None:
@@ -407,3 +404,33 @@ def PrintFE(db, name, min_req, max_req, subjects):
 			print(f"at least {min_req} UOC of {name}")
 		else:
 			print(f"at least {min_req} UOC of Free Electives")
+
+def PrintGE(UOC):
+	print(f"{UOC} UOC of General Education")
+	return
+
+# ================ Q3 ================
+def PrintPE_Q3(name, min_req, max_req):
+	if min_req != None and max_req != None:
+		if min_req == max_req:
+			print(f"{min_req} UOC from {name}")
+		elif min_req < max_req:
+			print(f"between {min_req} and {max_req} UOC courses from {name}")
+	elif min_req == None:
+		print(f"up to {max_req} UOC courses from {name}")
+	elif max_req == None:
+		print(f"at least {min_req} UOC courses from {name}")
+
+
+def PrintFE_Q3(name, min_req, max_req):
+	if min_req == None:
+		print(f"up to {min_req} UOC courses from {name}")
+	elif max_req == None:
+		if "Free Electives" not in name:
+			print(f"at least {min_req} UOC of {name}")
+		else:
+			print(f"at least {min_req} UOC of Free Electives")
+
+def PrintGE_Q3(UOC):
+	print(f"{UOC} UOC of General Education")
+	return
