@@ -7,6 +7,8 @@ import re
 from helpers import getBasicProgramInfo, getBasicStreamInfo, getCompletedSubjects, getProgramRules, getProgramStreamTableByZid, getStreamRules, getStudent, getProgram, getStream, getNameByZid
 
 # define any local helper functions here
+debug = 0
+
 
 ### set up some globals
 
@@ -88,15 +90,18 @@ try:
 		splited_requirements = program_rule[-1].split(",")
 		formated_requirements = []
 		for i in splited_requirements:
-			if '#' in i:
+			i = i.replace('{', '["')
+			i = i.replace('}', '"]')
+			i = i.replace(';', '","')
+			if '[' in i and ']' in i:
+				formated_requirements.append(eval(i))
+			elif '#' in i:
 				formated_requirements.append(re.sub('#', '.', i))
 			else:
 				formated_requirements.append(i)
   
 		formated_program_rule.append(formated_requirements)
 		formated_program_rules.append(formated_program_rule)
-  
-  
 	rules[program] = formated_program_rules
 
 	# get stream rules
@@ -121,8 +126,7 @@ try:
 		formated_stream_rules.append(formated_stream_rule)
 	rules[stream] = formated_stream_rules
 
-	# debug
-	print(rules)
+	if debug : print(rules)
 
 
 	print(f"\nCompleted:")
@@ -134,74 +138,102 @@ try:
 	Print_Xuoc = ['A','B','C','D','HD','DN','CR','PS','XE','T','SY','EC','NC']
 	Print_fail = ['AF','FL','UF']
 	Print_none = ['AS','AW','PW','RD','NF','LE','PE','WD','WJ']
+ 
+	Fail_str = "   fail does not count"
 
 	total_achieved_uoc  = 0
 	for subjectInfo in CompletedSubjects:
 		[CourseCode, Term, SubjectTitle, Mark, Grade, UOC] = subjectInfo
-  
-		# uoc and wam calculate
-		if Grade in Grade_in_UOC:
-			total_achieved_uoc += UOC
 
+		# printable strings
 		CourseCode_str = f"{CourseCode}"
 		Term_str = f"{Term}"
 		SubjectTitle_str = f"{SubjectTitle:<32s}"
 		Mark_str = "  -" if Mark == None else f"{Mark:>3}"
 		Grade_str = f"{Grade:2s}"
+		UOC_str = f"{UOC:2d}uoc" if Grade in Print_Xuoc else ""
 		
-		Rule_str = ""
+		suitable_rules = []
+		# check stream rules
+		for stream_rule in rules[stream]:
+			for requirement in stream_rule[-1]:
+				if type(requirement) == list:
+					for code_str in requirement:
+						# result has all possible results of regular expression
+						result = re.findall(code_str, CourseCode)
+						if result:
+							for i in result:
+								# result_info : [rule_name, min_req, max_rea, course_code]
+								result_info =  stream_rule[:-1] + [CourseCode]
+								del result_info[1]
+								# append to suitable_list
+								suitable_rules.append({stream_rule[1]: result_info})
+
+				elif type(requirement) == str and re.match(requirement, CourseCode):
+					# result_info : [rule_name, min_req, max_rea, course_code]
+					result_info =  stream_rule[:-1] + [CourseCode]
+					del result_info[1]
+					# append to suitable_list
+					suitable_rules.append({stream_rule[1]: result_info})
+
+
 		# check program rules
 		for program_rule in rules[program]:
 			for requirement in program_rule[-1]:
-				is_found = False
 				if type(requirement) == list:
 					for code_str in requirement:
-						if re.match(code_str, CourseCode):
-							Rule_str = program_rule[0]
-							print("I find it! here : ", Rule_str) # debug
-							is_found = True
+						# result has all possible results of regular expression
+						result = re.findall(code_str, CourseCode)
+						if result:
+							for i in result:
+								# result_info : [rule_name, min_req, max_rea, course_code]
+								result_info =  program_rule[:-1] + [CourseCode]
+								del result_info[1]
+								# append to suitable_list
+								suitable_rules.append({program_rule[1]: result_info})
+
 				elif type(requirement) == str and re.match(requirement, CourseCode):
-					Rule_str = program_rule[0]
-					print("I find it! here : ", Rule_str) # debug
-					is_found = True
+					# result_info : [rule_name, min_req, max_rea, course_code]
+					result_info =  program_rule[:-1] + [CourseCode]
+					del result_info[1]
+					# append to suitable_list
+					suitable_rules.append({program_rule[1]: result_info})
 
-				if is_found == True:
-					break
+		if debug : print("\n\n")
+		if debug : print(suitable_rules)
+		if debug : print(len(suitable_rules))
 
-		# check stream rules
-		if Rule_str == "":
-			for stream_rule in rules[stream]:
-				for requirement in stream_rule[-1]:
-					is_found = False
-					if type(requirement) == list:
-						for code_str in requirement:
-							if re.match(code_str, CourseCode):
-								Rule_str = stream_rule[0]
-								print("I find it! here : ", Rule_str) # debug
-								is_found = True
-					elif type(requirement) == str and re.match(requirement, CourseCode):
-						Rule_str = stream_rule[0]
-						print("I find it! here : ", Rule_str) # debug
-						is_found = True
+		Toward_list = []
+		for suitable_rule in suitable_rules:
+			if 'CC' in suitable_rule:
+				Toward_list.append(suitable_rule['CC'][0])
+		if Toward_list == []:
+			for suitable_rule in suitable_rules:
+				if 'PE' in suitable_rule:
+					Toward_list.append(suitable_rule['PE'][0])
+		if Toward_list == []:
+			for suitable_rule in suitable_rules:
+				if 'FE' in suitable_rule:
+					Toward_list.append(suitable_rule['FE'][0])
+		if Toward_list == []:
+			for suitable_rule in suitable_rules:
+				if 'GE' in suitable_rule:
+					Toward_list.append(suitable_rule['GE'][0])
+		if debug : print(Toward_list)
+		Toward_str = " + ".join(Toward_list)
+		if debug : print(Toward_str)
+		
+		# uoc calculate
+		if Grade in Grade_in_UOC and Toward_list != []:
+			total_achieved_uoc += UOC
 
-					if is_found == True:
-						break
-
-  
-		UOC_str = ""
 		if Grade in Print_Xuoc:
-			UOC_str = f"{UOC:2d}uoc"
-
-		Toward_str = ""
-		if Rule_str == "":
-			Toward_str = " does not satisfy any rule"
-		else:
-			Toward_str = f" towards {Rule_str}"
-  
-		if Grade in Print_Xuoc:
-			print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str + "  " + UOC_str + Toward_str)
+			if Toward_str != "":
+				print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str + "  " + UOC_str + " towards " + Toward_str)
+			else:
+				print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str + "  " + UOC_str + " does not satisfy any rule")
 		elif Grade in Print_fail:
-			print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str + "   " + "fail does not count")
+			print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str + Fail_str)
 		else:
 			print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str + Toward_str)
 	print(f"UOC = {total_achieved_uoc} so far")

@@ -45,17 +45,33 @@ where streams.code = 'COMPBH';
 
 drop view Table03;
 
+-- select
+--     rules.name as rule_name,
+--     rules.type as rule_type,
+--     rules.min_req as min_req,
+--     rules.max_req as max_req,
+--     academic_object_groups.definition as requirements
+-- from program_rules
+-- join programs on (programs.id = program_rules.program)
+-- join rules on (rules.id = program_rules.rule)
+-- join academic_object_groups on (academic_object_groups.id = rules.ao_group)
+-- where programs.code = '3707';
+
 select
-    rules.name as rule_name,
-    rules.type as rule_type,
-    rules.min_req as min_req,
-    rules.max_req as max_req,
+    subjects.code as subject,
+    terms.code as term,
+    subjects.name as title,
+    course_enrolments.mark,
+    course_enrolments.grade,
+    subjects.uoc,
     academic_object_groups.definition as requirements
-from program_rules
-join programs on (programs.id = program_rules.program)
-join rules on (rules.id = program_rules.rule)
+from course_enrolments
+join courses on (course_enrolments.course = courses.id)
+join subjects on (courses.subject = subjects.id)
+join terms on (courses.term = terms.id)
 join academic_object_groups on (academic_object_groups.id = rules.ao_group)
-where programs.code = '3707';
+where course_enrolments.student = '5123788'
+order by terms.code, subjects.code;
 
 
 
