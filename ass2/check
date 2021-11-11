@@ -3,7 +3,7 @@
 rm -f tests/*.observed
 ulimit -t 2
 
-for t in `seq -w 1 18`
+for t in `seq -w 1 19`
 do
 	cmd=`grep "^$t" tests/tests | awk '{print $2}'`
 	if [ ! -x "$cmd" ]

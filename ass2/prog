@@ -227,18 +227,18 @@ try:
 					[rule_name, rule_type, min_req, max_req, courses] = rule
 					if rule_name in relevant_rules[Toward_type]:
 						for course in courses[:]:
-							if type(course) == list and CourseCode in course:
-								courses.remove(course)
-								if min_req != None: min_req -= UOC
-								if max_req != None: max_req -= UOC
-							elif type(course) == str and re.match(course, CourseCode) and rule_type != 'FE':
-								courses.remove(course)
-								if min_req != None: min_req -= UOC
-								if max_req != None: max_req -= UOC
-							elif rule_type == 'FE':
-								courses.remove(course)
+							if rule_type == 'FE' or rule_type == 'GE':
 								if min_req != None and min_req >= UOC: min_req -= UOC
 								if max_req != None and max_req >= UOC: max_req -= UOC
+							else:
+								if type(course) == list and CourseCode in course:
+									courses.remove(course)
+									if min_req != None: min_req -= UOC
+									if max_req != None: max_req -= UOC
+								elif type(course) == str and re.match(course, CourseCode):
+									courses.remove(course)
+									if min_req != None: min_req -= UOC
+									if max_req != None: max_req -= UOC
 					rule = [rule_name, rule_type, min_req, max_req, courses]
 					program_rules.append(rule)
 
@@ -249,6 +249,9 @@ try:
 					if type(rule[3]) == int:
 						if rule[3] == 0:
 							stream_rules.remove(rule)
+					else:
+						if rule[2] == 0:
+							stream_rules.remove(rule)
 
 				# remove program rule with no courses
 				for rule in program_rules[:]:
@@ -256,6 +259,9 @@ try:
 						program_rules.remove(rule)
 					if type(rule[3]) == int:
 						if rule[3] == 0:
+							program_rules.remove(rule)
+					else:
+						if rule[2] == 0:
 							program_rules.remove(rule)
 
 
