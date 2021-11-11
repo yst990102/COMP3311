@@ -364,7 +364,11 @@ def PrintPE(db, name, min_req, max_req, subjects):
 	subject_list = subjects.split(",")
 	if min_req != None and max_req != None:
 		if min_req == max_req:
-			print(f"{min_req} UOC courses from {name}")
+			# need to treat ADK in different format
+			if "ADK" in name:
+				print(f"{min_req} UOC from {name}")
+			else:
+				print(f"{min_req} UOC courses from {name}")
 		elif min_req < max_req:
 			print(f"between {min_req} and {max_req} UOC courses from {name}")
 	elif min_req == None:
@@ -413,7 +417,11 @@ def PrintGE(UOC):
 def PrintPE_Q3(name, min_req, max_req):
 	if min_req != None and max_req != None:
 		if min_req == max_req:
-			print(f"{min_req} UOC from {name}")
+			# need to treat ADK in different format
+			if "ADK" in name:
+				print(f"{min_req} UOC from {name}")
+			else:
+				print(f"{min_req} UOC courses from {name}")
 		elif min_req < max_req:
 			print(f"between {min_req} and {max_req} UOC courses from {name}")
 	elif min_req == None:
