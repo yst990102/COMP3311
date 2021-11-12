@@ -379,7 +379,13 @@ def PrintPE(db, name, min_req, max_req, subjects):
 
 	if min_req != None and max_req != None:
 		for subject in subject_list:
-			if len(subject) == 8:
+			subject = subject.replace('{', '["')
+			subject = subject.replace('}', '"]')
+			subject = subject.replace(';', '","')
+			if '[' in subject and ']' in subject:
+				subject = eval(subject)
+   
+			if type(subject) != list:
 				subject_info = getSubjectNameByCode(db, subject)
 				if subject_info == None:
 					subject_name = "???"
@@ -387,15 +393,12 @@ def PrintPE(db, name, min_req, max_req, subjects):
 					subject_name = subject_info[1]
 				print(f"- {subject} {subject_name}")
 			else:
-				alter_list = re.split("{|;|}", subject)
-				alter_list = list(filter(None, alter_list))
-
-				for i in range(len(alter_list)):
-					subject_info = getSubjectNameByCode(db, alter_list[i])
+				for i in range(len(subject)):
+					subject_info = getSubjectNameByCode(db, subject[i])
 					if i == 1:
-						print(f"  or {alter_list[i]} {subject_info[1]}")
+						print(f"  or {subject[i]} {subject_info[1]}")
 					else:
-						print(f"- {alter_list[i]} {subject_info[1]}")
+						print(f"- {subject[i]} {subject_info[1]}")
 	else:
 		print(f"- courses matching {subjects}")
 	return
