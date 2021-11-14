@@ -155,10 +155,16 @@ try:
 	CompletedSubjects = getCompletedSubjects(db, zid)
 	for CompletedSubject in CompletedSubjects:
 		[CourseCode, Term, SubjectTitle, Mark, Grade, UOC] = CompletedSubject
+		# print transcript
+		CourseCode_str = f"{CourseCode}"
+		Term_str = f"{Term}"
+		SubjectTitle_str = f"{SubjectTitle:<32s}"
+		Mark_str = "  -" if Mark == None else f"{Mark:>3}"
+		Grade_str = " -" if Grade == None else f"{Grade:2s}"
 		Mark = "  -" if Mark == None else f"{Mark:>3}"
   
-		if Grade in Print_fail:
-			print(f"{CourseCode} {Term} {SubjectTitle:<32s}{Mark:>3} {Grade:2s}   fail does not count")
+		if Grade in Print_fail or Grade == None:
+			print(f"{CourseCode_str} {Term_str} {SubjectTitle_str}{Mark_str} {Grade_str}   fail does not count")
 		else:
 			relevant_rules = {}
 			relevant_stream_rules_DS = getRelevantRules(stream_rules, CourseCode, 'DS')
@@ -268,13 +274,6 @@ try:
 			if debug : print()
 			if debug : print(program_rules)
 			if debug : print(stream_rules)
-
-			# print transcript
-			CourseCode_str = f"{CourseCode}"
-			Term_str = f"{Term}"
-			SubjectTitle_str = f"{SubjectTitle:<32s}"
-			Mark_str = "  -" if Mark == None else f"{Mark:>3}"
-			Grade_str = " -" if Grade == None else f"{Grade:2s}"
 
 			if Toward_str == "":
 				print(f"{CourseCode_str} {Term_str} {SubjectTitle_str}{Mark_str} {Grade_str}  {0:2d}uoc does not satisfy any rule")
