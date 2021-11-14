@@ -269,13 +269,20 @@ try:
 			if debug : print(program_rules)
 			if debug : print(stream_rules)
 
+			# print transcript
+			CourseCode_str = f"{CourseCode}"
+			Term_str = f"{Term}"
+			SubjectTitle_str = f"{SubjectTitle:<32s}"
+			Mark_str = "  -" if Mark == None else f"{Mark:>3}"
+			Grade_str = " -" if Grade == None else f"{Grade:2s}"
+
 			if Toward_str == "":
-				print(f"{CourseCode} {Term} {SubjectTitle:<32s}{Mark:>3} {Grade:2s}  {0:2d}uoc does not satisfy any rule")
+				print(f"{CourseCode_str} {Term_str} {SubjectTitle_str}{Mark_str} {Grade_str}  {0:2d}uoc does not satisfy any rule")
 			else:
 				if Toward_type == 'CC' or Toward_type == 'PE' or Toward_type == 'GE':
-					print(f"{CourseCode} {Term} {SubjectTitle:<32s}{Mark:>3} {Grade:2s}  {UOC:2d}uoc towards {Toward_str}")
+					print(f"{CourseCode_str} {Term_str} {SubjectTitle_str}{Mark_str} {Grade_str}  {UOC:2d}uoc towards {Toward_str}")
 				elif Toward_type == 'FE':
-					print(f"{CourseCode} {Term} {SubjectTitle:<32s}{Mark:>3} {Grade:2s}  {UOC:2d}uoc towards Free Electives")
+					print(f"{CourseCode_str} {Term_str} {SubjectTitle_str}{Mark_str} {Grade_str}  {UOC:2d}uoc towards Free Electives")
 				total_achieved_uoc += UOC
 	print(f"UOC = {total_achieved_uoc:2d} so far")
 

@@ -64,7 +64,7 @@ try:
 		Term_str = f"{Term}"
 		SubjectTitle_str = f"{SubjectTitle:<32s}"
 		Mark_str = "  -" if Mark == None else f"{Mark:>3}"
-		Grade_str = f"{Grade:2s}"
+		Grade_str = " -" if Grade == None else f"{Grade:2s}"
 		
 		UOC_str = ""
 		if Grade in Print_Xuoc:
@@ -75,8 +75,10 @@ try:
 		else:
 			UOC_str = ""
 			print(CourseCode_str + " " + Term_str + " " + SubjectTitle_str + Mark_str + " " + Grade_str)
-
-	print(f"UOC = {total_achieved_uoc}, WAM = {weighted_mark_sum / total_attempted_uoc:.1f}")
+	if total_attempted_uoc != 0:
+		print(f"UOC = {total_achieved_uoc}, WAM = {weighted_mark_sum / total_attempted_uoc:.1f}")
+	else:
+		print(f"UOC = {total_achieved_uoc}, WAM = {0:.1f}")
 
 
 
