@@ -195,12 +195,12 @@ try:
 			elif relevant_rules['PE']:
 				Toward_str = " + ".join(sorted(relevant_rules['PE'], reverse=True))
 				Toward_type = 'PE'
-			elif relevant_rules['FE']:
-				Toward_str = " + ".join(sorted(relevant_rules['FE'], reverse=True))
-				Toward_type = 'FE'
 			elif relevant_rules['GE']:
 				Toward_str = " + ".join(sorted(relevant_rules['GE'], reverse=True))
 				Toward_type = 'GE'
+			elif relevant_rules['FE']:
+				Toward_str = " + ".join(sorted(relevant_rules['FE'], reverse=True))
+				Toward_type = 'FE'
 
 			if debug : print()
 			if debug : print(Toward_str)
@@ -299,20 +299,21 @@ try:
 			rest_CC_Rules.append(stream_rule)
 		elif rule_type == 'PE':
 			rest_PE_Rules.append(stream_rule)
-		elif rule_type == 'FE':
-			rest_FE_Rules.append(stream_rule)
 		elif rule_type == 'GE':
 			rest_GE_Rules.append(stream_rule)
+		elif rule_type == 'FE':
+			rest_FE_Rules.append(stream_rule)
 	for project_rule in program_rules:
 		[rule_name, rule_type, min_req, max_req, courses] = project_rule
 		if rule_type == 'CC':
 			rest_CC_Rules.append(project_rule)
 		elif rule_type == 'PE':
 			rest_PE_Rules.append(project_rule)
-		elif rule_type == 'FE':
-			rest_FE_Rules.append(project_rule)
 		elif rule_type == 'GE':
 			rest_GE_Rules.append(project_rule)
+		elif rule_type == 'FE':
+			rest_FE_Rules.append(project_rule)
+   
 	if debug : print(rest_CC_Rules)
 	if debug : print(rest_PE_Rules)
 	if debug : print(rest_FE_Rules)
@@ -342,14 +343,14 @@ try:
 	for pe_rule in rest_PE_Rules:
 		[rule_name, rule_type, min_req, max_req, courses] = pe_rule
 		PrintPE_Q3(rule_name, min_req, max_req)
-	# print general info of FE rules
-	for fe_rule in rest_FE_Rules:
-		[rule_name, rule_type, min_req, max_req, courses] = fe_rule
-		PrintFE_Q3(rule_name, min_req, max_req)
 	# print general info of GE rules
 	for ge_rule in rest_GE_Rules:
 		[rule_name, rule_type, min_req, max_req, courses] = ge_rule
 		PrintGE_Q3(min_req)
+	# print general info of FE rules
+	for fe_rule in rest_FE_Rules:
+		[rule_name, rule_type, min_req, max_req, courses] = fe_rule
+		PrintFE_Q3(rule_name, min_req, max_req)
 
 
 except Exception as err:

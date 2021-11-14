@@ -61,7 +61,7 @@ def getTranscriptInfo(db, zid):
 	join subjects on (courses.subject = subjects.id)
 	join terms on (courses.term = terms.id)
 	where course_enrolments.student = %s
-	order by terms.code, subjects.code;
+	order by terms.starting, subjects.code;
 	"""
 	cursor.execute(query,[zid])
 	results = cursor.fetchall()
